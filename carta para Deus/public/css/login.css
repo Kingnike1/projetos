@@ -1,0 +1,273 @@
+/* CSS reset */
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* remove a linha dos links */
+a {
+  text-decoration: none;
+}
+
+/* esconde as ancoras da tela */
+a.links {
+  display: none;
+}
+
+.content {
+  width: 500px;
+  min-height: 560px;
+  margin: 0px auto;
+  position: relative;
+}
+
+h1 {
+  font-size: 48px;
+  color: #8e44ad;
+  padding: 2px 0 10px 0;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+h1:after {
+  content: ' ';
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin-top: 10px;
+  background: -webkit-linear-gradient(left, rgba(147, 184, 189, 0) 0%, rgba(147, 184, 189, 0.8) 20%, rgba(147, 184, 189, 1) 53%, rgba(147, 184, 189, 0.8) 79%, rgba(147, 184, 189, 0) 100%);
+  background: linear-gradient(left, rgba(147, 184, 189, 0) 0%, rgba(147, 184, 189, 0.8) 20%, rgba(147, 184, 189, 1) 53%, rgba(147, 184, 189, 0.8) 79%, rgba(147, 184, 189, 0) 100%);
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+.content p:first-child {
+  margin: 0px;
+}
+
+label {
+  color: #6b5b95;
+  position: relative;
+}
+
+/* placeholder */
+::-webkit-input-placeholder {
+  color: #b39ddb;
+  font-style: italic;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #b39ddb;
+  font-style: italic;
+}
+
+input {
+  outline: none;
+}
+
+/*estilo dos input, menos o checkbox */
+input:not([type="checkbox"]) {
+  width: 95%;
+  margin-top: 4px;
+  padding: 10px;
+  border: 1px solid #b2b2b2;
+
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+  box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+/*estilo do botão submit */
+input[type="submit"] {
+  width: 100% !important;
+  cursor: pointer;
+  background: linear-gradient(90deg, #8e44ad, #3498db);
+  padding: 8px 5px;
+  color: #fff;
+  font-size: 20px;
+  border: 1px solid #fff;
+  margin-bottom: 10px;
+  text-shadow: 0 1px 1px #333;
+
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+
+  transition: all 0.2s linear;
+}
+
+/*estilo do botão submit no hover */
+input[type="submit"]:hover {
+  background: linear-gradient(90deg, #9b59b6, #2980b9);
+}
+
+/* link */
+.link {
+  /*! background: #e1e3f7; */
+  color: #7f7c7c;
+  height: 20px;
+  width: 407px;
+  padding: 17px 30px;
+  font-size: 16px;
+  text-align: right;
+  /*! border-top: 1px solid #dbe5e8; */
+  border-radius: 0 0 5px 5px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.link a {
+  font-weight: bold;
+  background: #f3e5f5;
+  padding: 6px;
+  color: #8e44ad;
+  border: 1px solid #d39ae2;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.4s linear;
+}
+
+.link a:hover {
+  color: #ab47bc;
+  background: #f0e6ff;
+  border: 1px solid #9c27b0;
+}
+
+/* Link Esqueci Minha Senha */
+.link2 {
+  /*! background: #e1f7fa; */
+  /*! color: #007bb5; */
+  height: 20px;
+  width: 404px;
+  padding: 17px 30px;
+  font-size: 16px;
+  text-align: right;
+  /*! border-top: 1px solid #b2ebf2; */
+  border-radius: 0 0 5px 5px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.link2 a {
+  font-weight: bold;
+  background: #e0f7fa;
+  padding: 6px;
+  color: #00838f;
+  border: 1px solid #00acc1;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.4s linear;
+}
+
+.link2 a:hover {
+  color: #00acc1;
+  background: #e6f7ff;
+  border: 1px solid #00bcd4;
+}
+
+
+
+#cadastro,
+#login {
+  position: absolute;
+  top: 0px;
+  width: 88%;
+  padding: 18px 6% 60px 6%;
+  margin: 0 0 35px 0;
+  background: #f3e5f5;
+  border: 1px solid rgba(147, 184, 189, 0.8);
+
+  -webkit-box-shadow: 5px;
+  border-radius: 5px;
+
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-fill-mode: both;
+
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+}
+
+
+/* Efeito ao clicar no botão ( Ir para Login ) */
+#paracadastro:target~.content #cadastro,
+#paralogin:target~.content #login {
+  z-index: 2;
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+
+  -webkit-animation-delay: .1s;
+  animation-delay: .1s;
+}
+
+/* Efeito ao clicar no botão ( Cadastre-se ) */
+#registro:target~.content #login,
+#paralogin:target~.content #cadastro {
+  -webkit-animation-name: fadeOutLeft;
+  animation-name: fadeOutLeft;
+}
+
+/*fadeInLeft*/
+@-webkit-keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/*fadeOutLeft*/
+@-webkit-keyframes fadeOutLeft {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+  }
+}
+
+@keyframes fadeOutLeft {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+}

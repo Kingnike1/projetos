@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta http-equiv="refresh" content="10;url=https://www.exemplo.com"> -->
+    <title>Redirecionamento com Vários Links</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet" />
+    <style>
+      /* Estilo básico da página */
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #121212;
+        color: #fff;
+        font-family: "Poppins", sans-serif;
+        text-align: center;
+        flex-direction: column;
+      }
+
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+      }
+
+      .link {
+        font-size: 1.2rem;
+        color: #ff9900;
+        text-decoration: none;
+        margin: 5px;
+        display: block;
+      }
+
+      .spinner {
+        margin-top: 30px;
+        width: 50px;
+        height: 50px;
+        border: 6px solid rgba(255, 255, 255, 0.3);
+        border-top: 6px solid #ff9900;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .links-container {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Você está sendo redirecionado...</h1>
+    <p>Se não for redirecionado automaticamente</p>
+
+    <div class="links-container">
+      <a href="./animaçoes/animacao_efeito_digitacao.html"
+        class="link">Animações - Efeito Digitação</a>
+      <a href="./background/index.html" class="link">Background</a>
+      <a href="./barb_theus/index.html" class="link">Barbearia do theus</a>
+      <a href="./biblico/index.html" class="link">Biblia</a>
+
+      <a href="./card/index.html" class="link">Card</a>
+      <a href="./escuro e claro/escuro_claro.html" class="link">Escuro e
+        Claro</a>
+      <a href="./escuro_claro/index.html" class="link">Escuro Claro</a>
+      <a href="./pomodoro/index.html" class="link">Background</a>
+
+      <a href="./site3d/cubo.html" class="link">Site 3D - Cubo</a>
+      <a href="./slide/index.html" class="link">Slide</a>
+      <a href="./tabelas/index.php" class="link">Tabelas</a>
+      <a href="./transicao/index.html" class="link">Transição</a>
+    </div>
+
+    <div class="spinner"></div>
+  </body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nike</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" href="nike-shoes-logo-png-13.png" type="image/png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+
+<body>
+
+    <!-- Container de cartões de produtos -->
+    <div class="container">
+        <!-- Cartão Azul -->
+        <a target="_parent" onclick="loadBlue()" href="pagina1.html#azul">
+            <div class="cartao azul">
+                <div class="produto">
+                    <span class="numero">01</span>
+                    <span class="tenis">TÊNIS</span>
+                    <span class="preco">R$39,90</span>
+                    <img src="1.png" style="max-width: 100%; max-height: 60%" />
+                </div>
+                <div class="titulo">
+                    <h2>Nike Azul</h2>
+                </div>
+            </div>
+            <a>
+                <!-- Cartão Roxo -->
+                <a target="_parent" onclick="loadPurple()" href="pagina1.html#roxo">
+
+                    <div class="cartao roxo">
+                        <div class="produto">
+                            <span class="numero">02</span>
+                            <span class="tenis">TÊNIS</span>
+                            <span class="preco">R$49,90</span>
+                            <img src="2.png" style="max-width: 100%; max-height: 60%" />
+                        </div>
+                        <div class="titulo">
+                            <h2>Nike Roxo</h2>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Cartão Vermelho -->
+                <a target="_parent" onclick="loadRed()" href="pagina1.html#vermelho">
+                    <div class="cartao vermelho">
+                        <div class="produto">
+                            <span class="numero">03</span>
+                            <span class="tenis">TÊNIS</span>
+                            <span class="preco">R$99,90</span>
+                            <img src="3.png" style="max-width: 100%; max-height: 60%" />
+                        </div>
+                        <div class="titulo">
+                            <h2>Nike Vermelho</h2>
+                        </div>
+                    </div>
+
+                </a>
+
+                <!-- Cartão Verde -->
+                <a target="_parent" onclick="loadGreen()" href="pagina1.html#verde">
+
+                    <div class="cartao verde">
+                        <div class="produto">
+                            <span class="numero">04</span>
+                            <span class="tenis">CHUTEIRA</span>
+                            <span class="preco">R$59,90</span>
+                            <img src="4.png" style="max-width: 100%; max-height: 60%" />
+                        </div>
+                        <div class="titulo">
+                            <h2>Nike Verde</h2>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Adicione mais cartões aqui conforme necessário -->
+    </div>
+    <script src="script.js"></script>
+    <!-- Scripts de animação e funcionalidade -->
+    <script src="vanilla-tilt.js"></script>
+    <script>
+        // Inicializa o efeito de tilt nos cartões
+        VanillaTilt.init(document.querySelectorAll(".cartao"), {
+            max: 25,
+            speed: 5000,
+            glare: true,
+            "max-glare": 0.5,
+        });
+    </script>
+</body>
+
+</html>

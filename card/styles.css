@@ -1,0 +1,297 @@
+/* Regras globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Corpo da página */
+body {
+    background: #121212;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Estilo do título principal */
+h1 {
+    margin: 20px;
+    color: red;
+    font-size: 6vw; /* Responsividade com unidades relativas */
+    transition: font-size 0.3s ease;
+}
+
+/* Container de cartões */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1000px;
+    gap: 20px; /* Espaçamento entre os cartões */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Cartões */
+.cartao {
+    width: 180px;
+    height: 280px;
+    border-radius: 12px;
+    transform-style: preserve-3d;
+    margin: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.cartao:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Cores dos cartões (gradientes) */
+.cartao.azul {
+    background: linear-gradient(135deg, #09AFFF, #125575);
+}
+
+.cartao.roxo {
+    background: linear-gradient(135deg, #5911F2, #290987);
+}
+
+.cartao.vermelho {
+    background: linear-gradient(135deg, #FF4141, #8B0000);
+}
+
+.cartao.verde {
+    background: linear-gradient(135deg, #32CD32, #228B22);
+}
+
+.cartao.amarelo {
+    background: linear-gradient(135deg, #FFD700, #FF8C00);
+}
+
+.cartao.rosa {
+    background: linear-gradient(135deg, #FF69B4, #C71585);
+}
+
+.cartao.cinza {
+    background: linear-gradient(135deg, #A9A9A9, #696969);
+}
+
+.cartao.marrom {
+    background: linear-gradient(135deg, #8B4513, #A52A2A);
+}
+
+.cartao.preto {
+    background: linear-gradient(135deg, #000000, #434343);
+}
+
+.cartao.branco {
+    background: linear-gradient(135deg, #FFFFFF, #DCDCDC);
+}
+
+/* Estilo do conteúdo dentro do cartão (produto) */
+.cartao .produto {
+    height: 85%;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
+    transform-style: preserve-3d;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+/* Estilo para os elementos do produto dentro do cartão */
+.produto .numero {
+    font-size: 60px;
+    line-height: 60px;
+    font-style: italic;
+    opacity: 0.25;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.produto .tenis {
+    font-size: 25px;
+    line-height: 25px;
+    font-style: italic;
+    opacity: 0.7;
+    position: absolute;
+    bottom: 30px;
+    left: 5px;
+}
+
+.produto .preco {
+    position: absolute;
+    bottom: 10px;
+    left: 5px;
+}
+
+/* Estilo do título dentro do cartão */
+.titulo {
+    margin-top: 10px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: 900;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .cartao {
+        width: 150px;
+        height: 250px;
+    }
+
+    h1 {
+        font-size: 10vw;
+    }
+}
+
+/* Animação de fade-in para os cartões */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.cartao {
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* Definição do estilo básico para o botão */
+#toggleTheme {
+    background-color: #ffffff;
+    border: 2px solid #ccc;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#toggleTheme i {
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+/* Estilo para o ícone de sol (tema claro) */
+#toggleTheme.light {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+#toggleTheme.light i {
+    content: '\f185'; /* Ícone de sol */
+}
+
+/* Estilo para o ícone de lua (tema escuro) */
+#toggleTheme.dark {
+    background-color: #333;
+    color: #f9f9f9;
+}
+
+#toggleTheme.dark i {
+    content: '\f186'; /* Ícone de lua */
+}
+
+/* Efeito ao passar o mouse */
+#toggleTheme:hover {
+    transform: scale(1.1);
+    border-color: #ff9900;
+}
+
+/* Transição suave */
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.light {
+    background-color: #fff;
+    color: #333;
+}
+
+body.dark {
+    background-color: #333;
+    color: #fff;
+}
+
+
+/* Efeito de brilho para os cartões ao passar o mouse */
+.cartao:hover {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+/* Estado expandido para os cartões */
+.cartao.expanded {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-radius: 0;
+    box-shadow: none;
+    background-color: transparent;
+    transform: none;
+    transition: all 0.7s ease-out; /* Transição suave e gradual */
+}
+
+/* Estilo para o conteúdo do produto quando expandido */
+.cartao.expanded .produto {
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    transition: all 0.7s ease-out; /* Transição suave para o conteúdo do produto */
+}
+
+.cartao.expanded .titulo {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #121212;
+    transition: all 0.7s ease-out; /* Transição suave para o título */
+}
+
+.cartao.expanded .titulo h2 {
+    font-size: 36px;
+    transition: font-size 0.7s ease-out; /* Transição suave para o título h2 */
+}
+
+/* Imagem do produto expandido */
+.cartao.expanded .produto img {
+    max-width: 80%;
+    max-height: 80%;
+    transition: all 0.7s ease-out; /* Transição suave para a imagem */
+}
+
+/* Fundo da página e transição de cor quando o cartão está expandido */
+body.expanded {
+    background-color: #121212;
+    transition: background-color 0.7s ease-out; /* Transição suave para a cor de fundo */
+}
+

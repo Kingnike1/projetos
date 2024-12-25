@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Técnica Pomodoro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Técnica Pomodoro</h1>
+        <div id="status" class="status">Preparando...</div>
+        <div id="timer" class="timer">25:00</div>
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+        <button id="start" class="button">Iniciar</button>
+        <button id="stop" class="button stop" style="display: none;">Parar</button>
+
+        <div class="mode-toggle">
+            <button id="toggle-mode" class="button">Modo Noturno</button>
+        </div>
+        <!-- Dicas de Estudo -->
+        <div class="dicas">
+            <h2>Dicas de Estudo e Concentração</h2>
+            <ul>
+                <li><strong>Estude em blocos:</strong> Use a técnica Pomodoro: Estude por 25 minutos e descanse 5
+                    minutos.</li>
+                <li><strong>Estude por 10 minutos:</strong> Faça intervalos de 10 minutos de estudo seguido por 2
+                    minutos de descanso.</li>
+                <li><strong>Mantenha o foco:</strong> Elimine distrações como celular e redes sociais.</li>
+                <li><strong>Planeje seu dia:</strong> Tenha objetivos claros para cada sessão de estudo.</li>
+                <li><strong>Faça anotações:</strong> Anotar ajuda a fixar o conhecimento e melhorar o aprendizado.</li>
+                <li><strong>Use mapas mentais:</strong> Organize suas ideias e conceitos de forma visual para melhor
+                    compreensão.</li>
+                <li><strong>Revise regularmente:</strong> Faça revisões periódicas para fortalecer a memória de longo
+                    prazo.</li>
+                <li><strong>Ensine o conteúdo:</strong> Explique o que aprendeu para outra pessoa, isso ajuda a
+                    consolidar o conhecimento.</li>
+                <li><strong>Faça resumos:</strong> Resuma os pontos principais do conteúdo de forma clara e concisa.
+                </li>
+                <li><strong>Utilize recursos multimídia:</strong> Vídeos, podcasts e infográficos podem facilitar o
+                    aprendizado.</li>
+                <li><strong>Estude em horários fixos:</strong> Tenha uma rotina diária consistente para criar hábitos
+                    eficazes.</li>
+                <li><strong>Descanse adequadamente:</strong> Durma bem e faça pausas curtas entre as sessões de estudo.
+                </li>
+                <li><strong>Configure seu espaço de estudo:</strong> Tenha um local organizado e livre de distrações.
+                </li>
+                <li><strong>Faça exercícios práticos:</strong> Pratique exercícios e atividades para reforçar o
+                    aprendizado.</li>
+                <li><strong>Use técnicas de visualização:</strong> Crie imagens mentais para conectar ideias e
+                    conceitos.</li>
+                <li><strong>Faça resumos audiovisuais:</strong> Grave vídeos ou áudios resumindo os principais pontos.
+                </li>
+                <li><strong>Leia em voz alta:</strong> Ler em voz alta pode ajudar a fixar informações e melhorar a
+                    concentração.</li>
+                <li><strong>Use aplicativos de estudo:</strong> Ferramentas e aplicativos podem ajudar na organização e
+                    prática.</li>
+                <li><strong>Estabeleça metas realistas:</strong> Defina objetivos alcançáveis para cada sessão de
+                    estudo.</li>
+                <li><strong>Reforce o aprendizado com músicas temáticas:</strong> Use trilhas sonoras instrumentais para
+                    melhorar o foco.</li>
+                <li><strong>Faça intervalos físicos:</strong> Pratique alongamentos e faça pequenos exercícios físicos.
+                </li>
+                <li><strong>Busque feedback:</strong> Pergunte a professores ou colegas sobre seu progresso e
+                    dificuldades.</li>
+                <li><strong>Desenvolva a autodisciplina:</strong> Dedique horários fixos e cumpra sua programação
+                    diária.</li>
+                <li><strong>Minimize o ruído externo:</strong> Use fones de ouvido ou protetores acústicos.</li>
+                <li><strong>Faça leitura diária:</strong> Leia livros ou artigos relacionados ao seu conteúdo de estudo.
+                </li>
+                <li><strong>Use técnicas de associação:</strong> Relacione novos conceitos com conhecimentos prévios.
+                </li>
+                <li><strong>Faça testes de conhecimento:</strong> Teste sua memória e aprendizado com perguntas e
+                    quizzes.</li>
+                <li><strong>Faça anotações coloridas:</strong> Use marcadores, canetas coloridas e adesivos.</li>
+                <li><strong>Faça pausas estruturadas:</strong> Utilize pausas programadas para recuperar a energia
+                    mental.</li>
+                <li><strong>Explore métodos interativos:</strong> Utilize flashcards, jogos educacionais e aplicativos
+                    interativos.</li>
+                <li><strong>Crie grupos de estudo:</strong> Estude em grupo e troque ideias com outros colegas.</li>
+                <li><strong>Elimine multitarefa:</strong> Foque em uma atividade por vez para melhorar a concentração.
+                </li>
+                <li><strong>Adote uma alimentação saudável:</strong> Consuma alimentos ricos em vitaminas e nutrientes
+                    essenciais.</li>
+                <li><strong>Faça meditação e exercícios de mindfulness:</strong> Pratique diariamente para reduzir o
+                    estresse e melhorar a atenção.</li>
+                <li><strong>Use técnicas de respiração profunda:</strong> Inspire e expire lentamente para relaxar e
+                    melhorar o foco.</li>
+                <li><strong>Faça intervalos ao ar livre:</strong> Estude em espaços externos para aumentar a
+                    criatividade.</li>
+                <li><strong>Explore métodos criativos de estudo:</strong> Use desenhos, esquemas e histórias para
+                    aprender melhor.</li>
+                <li><strong>Tenha um diário de estudo:</strong> Anote o progresso, os erros e os objetivos alcançados
+                    diariamente.</li>
+                <li><strong>Faça desafios diários:</strong> Teste suas habilidades todos os dias com novos desafios.
+                </li>
+                <li><strong>Use frases motivacionais:</strong> Coloque citações inspiradoras em seu espaço de estudo.
+                </li>
+                <li><strong>Busque momentos de autoconhecimento:</strong> Reflita sobre seu progresso e ajuste seus
+                    métodos.</li>
+            </ul>
+
+
+        </div>
+    </div>
+    <!-- Pop-up -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span id="closePopup" class="close">&times;</span>
+            <h2>Aviso</h2>
+            <p id="popupMessage">Mensagem do Pop-up</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

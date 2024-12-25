@@ -1,0 +1,32 @@
+/* Definição da animação */
+@keyframes mudarAzul {
+  0% {
+    background-color: #e0f7fa; /* Azul claro */
+  }
+  50% {
+    background-color: #b3e5fc; /* Azul um pouco mais escuro */
+  }
+  100% {
+    background-color: #81d4fa; /* Azul ainda mais intenso */
+  }
+}
+/* Corpo como contêiner pai */
+body {
+  display: grid;
+  place-items: center; /* Centraliza vertical e horizontalmente */
+  height: 100vh; /* Altura total da janela */
+  margin: 0; /* Remove margens padrão */
+  background-color: #f4f4f4;
+  animation: mudarAzul 6s infinite alternate; /* Nome da animação, duração e repetição */
+}
+
+/* Estilo da div .container */
+.container {
+  text-align: center;
+  align-items: center;
+  display: grid;
+  width: 100px;
+  height: 100px;
+  border-style: dashed;
+  border-color: #3498db;
+}

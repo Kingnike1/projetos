@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Animações e Efeito de Digitação</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column; /* Alinha os itens em coluna */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            color: #333;
+            font-size: 24px;
+        }
+
+        .typing-container {
+            position: relative;
+            display: inline-block;
+            border-right: 2px solid #333;
+            white-space: nowrap;
+            overflow: hidden; /* Esconde o texto que ainda não foi revelado */
+            animation: caret 0.75s step-end infinite; /* Animação do cursor */
+            margin-bottom: 20px; /* Espaçamento abaixo do texto */
+        }
+
+        @keyframes caret {
+            50% {
+                border-color: transparent; /* Apaga o cursor */
+            }
+        }
+
+        .container {
+            display: flex; /* Flex container para organizar os boxes */
+            flex-wrap: wrap; /* Permite que os boxes se movam para a linha seguinte */
+            justify-content: center; /* Centraliza os boxes horizontalmente */
+            margin-top: 20px; /* Espaçamento acima dos boxes */
+        }
+
+        .animate-box {
+            margin: 10px;
+            padding: 20px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            display: inline-block;
+            width: 200px;
+            text-align: center;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            opacity: 0; /* Começa invisível */
+            animation: fadeIn 1s forwards; /* Animação de fade in */
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1; /* Aparece gradualmente */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1></h1>
+
+    <div class="typing-container" id="typing">
+        <span id="text"></span>
+    </div>
+
+    <div class="container">
+        <div class="animate__animated animate__bounce animate-box">
+            Bounce
+        </div>
+        <div class="animate__animated animate__bounceIn animate-box">
+            Bounce In
+        </div>
+
+        <div class="animate__animated animate__flash animate-box">
+            Flash
+        </div>
+        <div class="animate__animated animate__flash animate-box">
+            Flashing
+        </div>
+
+        <div class="animate__animated animate__rubberBand animate-box">
+            Rubber Band
+        </div>
+        <div class="animate__animated animate__shakeX animate-box">
+            Shake X
+        </div>
+
+        <div class="animate__animated animate__zoomIn animate-box">
+            Zoom In
+        </div>
+        <div class="animate__animated animate__zoomOut animate-box">
+            Zoom Out
+        </div>
+
+        <div class="animate__animated animate__rotateIn animate-box">
+            Rotate In
+        </div>
+        <div class="animate__animated animate__rotateOut animate-box">
+            Rotate Out
+        </div>
+
+        <div class="animate__animated animate__fadeIn animate-box">
+            Fade In
+        </div>
+        <div class="animate__animated animate__fadeOut animate-box">
+            Fade Out
+        </div>
+
+        <div class="animate__animated animate__jello animate-box">
+            Jello
+        </div>
+        <div class="animate__animated animate__bounceInDown animate-box">
+            Bounce In Down
+        </div>
+
+        <div class="animate__animated animate__headShake animate-box">
+            Head Shake
+        </div>
+        <div class="animate__animated animate__swing animate-box">
+            Swing
+        </div>
+
+        <div class="animate__animated animate__lightSpeedInRight animate-box">
+            Light Speed In Right
+        </div>
+        <div class="animate__animated animate__lightSpeedOutLeft animate-box">
+            Light Speed Out Left
+        </div>
+
+        <div class="animate__animated animate__rollIn animate-box">
+            Roll In
+        </div>
+        <div class="animate__animated animate__rollOut animate-box">
+            Roll Out
+        </div>
+
+        <div class="animate__animated animate__tada animate-box">
+            Tada
+        </div>
+        <div class="animate__animated animate__flip animate-box">
+            Flip
+        </div>
+    </div>
+
+    <script>
+        const words = ["Animações com Animate.css e Efeito de Digitação"];
+        let index = 0;
+        let charIndex = 0;
+        let currentWord = '';
+        let isDeleting = false;
+
+        function type() {
+            // Verifica se está deletando ou digitando
+            if (isDeleting) {
+                currentWord = words[index].substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                currentWord = words[index].substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            document.getElementById('text').innerText = currentWord;
+
+            // Muda de direção se a palavra estiver completamente digitada ou deletada
+            if (!isDeleting && charIndex === words[index].length) {
+                isDeleting = true;
+                setTimeout(type, 1500); // Pausa antes de começar a deletar
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                index = (index + 1) % words.length; // Muda para a próxima palavra
+                setTimeout(type, 500); // Pausa antes de começar a digitar
+            } else {
+                setTimeout(type, isDeleting ? 100 : 150); // Ajusta a velocidade de digitação
+            }
+        }
+
+        // Inicia a animação de digitação
+        type();
+
+        // Anima todos os boxes ao carregar a página
+        const boxes = document.querySelectorAll('.animate-box');
+        boxes.forEach((box, i) => {
+            box.style.animationDelay = `${i * 0.2}s`; // Define um atraso para cada box
+            box.classList.add('animate__animated'); // Adiciona a classe de animação
+        });
+    </script>
+</body>
+</html>

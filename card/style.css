@@ -1,0 +1,127 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo e Tipografia */
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    background-color: #d10a1d; /* Cor inicial */
+    line-height: 1.5;
+}
+
+/* Estilo do Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+}
+
+.logo img {
+    width: 100px;
+}
+
+/* Navegação */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Conteúdo Principal */
+main {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Seção do Produto */
+.product {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.details {
+    max-width: 50%;
+    text-align: left;
+}
+
+.details h1, .details p {
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 2em;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Botão de Ícone */
+.icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5em;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icon-button:hover {
+    transform: scale(1.1);
+    color: #ffcc00;
+}
+/* Estilo para a seção do vídeo */
+.video {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #333; /* Fundo escuro para a seção */
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 80%;
+}
+
+/* Título da seção */
+.video h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Estilo do vídeo */
+video {
+    width: 100%; /* O vídeo ocupa toda a largura disponível */
+    max-width: 100%; /* Garantir que o vídeo não ultrapasse o tamanho da tela */
+    border-radius: 10px;
+}
+
+/* Mensagem de fallback para navegadores que não suportam vídeo */
+video::after {
+    content: "Seu navegador não suporta a tag de vídeo.";
+    display: block;
+    color: #f00;
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+  

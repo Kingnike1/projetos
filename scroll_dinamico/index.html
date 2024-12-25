@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Dinâmico Elaborado</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#section1">Home</a></li>
+            <li><a href="#section2">Sobre</a></li>
+            <li><a href="#section3">Serviços</a></li>
+            <li><a href="#section4">Contato</a></li>
+        </ul>
+    </nav>
+
+    <div class="section parallax" id="section1">
+        <h1>Bem-vindo!</h1>
+    </div>
+    <div class="section content" id="section2">
+        <h2>Sobre Nós</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod nisi eget justo eleifend, ut vehicula enim pharetra.</p>
+        <button onclick="alert('Obrigado por clicar!')">Saiba Mais</button>
+        <img src="https://via.placeholder.com/400" alt="Exemplo" class="image">
+    </div>
+    
+    <div class="section parallax" id="section3">
+        <h2>Nossos Serviços</h2>
+    </div>
+    <div class="section content" id="section4">
+        <h2>Fale Conosco</h2>
+        <p>Envie sua mensagem para <a href="mailto:contato@example.com">contato@example.com</a></p>
+        <button onclick="alert('Mensagem enviada com sucesso!')">Enviar Mensagem</button>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Scroll Dinâmico. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js"></script>
+
+</body>
+
+</html>

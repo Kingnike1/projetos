@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos de Texto com Imagem de Fundo</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        div {
+            margin-bottom: 20px;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            color: white;
+            border-radius: 8px;
+        }
+        hr {
+            border: none;
+            height: 1px;
+            background-color: #ccc;
+        }
+
+        /* Exemplo 1: Texto com Imagem de Fundo */
+        .image-background {
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8SdsR9K6qNNxkExuSRl5RWtaas2EIeFLl8A&s');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Exemplo 2: Texto com Gradiente de Cores e Imagem */
+        .gradient-image {
+            background: linear-gradient(to right, rgba(255, 0, 0, 0.5), rgba(0, 0, 255, 0.5)), url('caminho-da-imagem2.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Exemplo 3: Texto com Desfoque */
+        .blur-text {
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8SdsR9K6qNNxkExuSRl5RWtaas2EIeFLl8A&s');
+            background-size: cover;
+            background-position: center;
+            filter: blur(1px);
+        }
+
+        /* Exemplo 4: Texto com Imagem em Preenchimento */
+        .fill-text {
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8SdsR9K6qNNxkExuSRl5RWtaas2EIeFLl8A&s');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        /* Exemplo 5: Texto Animado com Imagem */
+        .animated-text {
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8SdsR9K6qNNxkExuSRl5RWtaas2EIeFLl8A&s');
+            animation: slide 5s infinite;
+            background-size: cover;
+            background-position: center;
+        }
+
+        @keyframes slide {
+            from { background-position: 0; }
+            to { background-position: 100%; }
+        }
+
+        /* Exemplo 6: Texto com Sombra */
+        .shadow-text {
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8SdsR9K6qNNxkExuSRl5RWtaas2EIeFLl8A&s');
+            background-size: cover;
+            background-position: center;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Exemplo 7: Texto com Efeito de Parallax */
+        .parallax-text {
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8SdsR9K6qNNxkExuSRl5RWtaas2EIeFLl8A&s');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Exemplo 8: Texto com Bordas Decorativas */
+        .decorative-text {
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8SdsR9K6qNNxkExuSRl5RWtaas2EIeFLl8A&s');
+            background-size: cover;
+            background-position: center;
+            border: 5px solid rgba(255, 255, 255, 0.8);
+            padding: 30px; /* Ajuste do preenchimento */
+        }
+
+        /* Exemplo 9: Texto com Filtro de Cor */
+        .color-filter-text {
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8SdsR9K6qNNxkExuSRl5RWtaas2EIeFLl8A&s');
+            background-size: cover;
+            background-position: center;
+            filter: sepia(1);
+        }
+
+        /* Exemplo 10: Texto com Imagem de Fundo em Repetição */
+        .repeated-background {
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8SdsR9K6qNNxkExuSRl5RWtaas2EIeFLl8A&s');
+            background-repeat: repeat;
+            background-size: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-background">Texto com Imagem de Fundo</div>
+    <hr>
+    <div class="gradient-image">Texto com Gradiente e Imagem</div>
+    <hr>
+    <div class="blur-text">Texto com Desfoque</div>
+    <hr>
+    <div class="fill-text">Texto com Imagem em Preenchimento</div>
+    <hr>
+    <div class="animated-text">Texto Animado</div>
+    <hr>
+    <div class="shadow-text">Texto com Sombra</div>
+    <hr>
+    <div class="parallax-text">Texto com Parallax</div>
+    <hr>
+    <div class="decorative-text">Texto com Bordas Decorativas</div>
+    <hr>
+    <div class="color-filter-text">Texto com Filtro de Cor</div>
+    <hr>
+    <div class="repeated-background">Texto com Imagem de Fundo em Repetição</div>
+</body>
+</html>

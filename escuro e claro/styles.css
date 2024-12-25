@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4; /* Cor de fundo clara */
+    color: #333; /* Cor do texto clara */
+    transition: background-color 0.5s, color 0.5s; /* Transição suave */
+}
+
+.dark-mode {
+    background-color: #333; /* Cor de fundo escura */
+    color: #f4f4f4; /* Cor do texto escura */
+}
+
+.toggle-button {
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Cor do botão */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.toggle-button:hover {
+    background-color: #45a049; /* Cor do botão ao passar o mouse */
+}
+
+.content {
+    text-align: center; /* Centraliza o texto */
+}

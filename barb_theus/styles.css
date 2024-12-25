@@ -1,0 +1,318 @@
+/* Fontes padrão */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    font-family: Verdana, sans-serif;
+    background-color: #121212; /* Fundo escuro elegante */
+    color: #fff;
+}
+
+img {
+    vertical-align: middle;
+}
+
+/* Sidebar */
+.w3-sidebar {
+    width: 120px;
+    background: #1e1e1e; /* Fundo escuro */
+}
+
+/* Ajuste do conteúdo principal */
+#main {
+    margin-left: 120px;
+}
+
+/* Remove margem em telas pequenas */
+@media only screen and (max-width: 600px) {
+    #main {
+        margin-left: 0;
+    }
+}
+
+/* ---------------------- Header ---------------------- */
+
+/* Header */
+header.w3-container {
+    background: #000;
+    color: #ffd700; /* Dourado */
+}
+
+header.w3-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* ---------------------- Sobre Nós ---------------------- */
+
+#sobre {
+    text-align: center;
+    padding: 64px 0;
+}
+
+#sobre h2 {
+    font-weight: bold;
+    color: #ffd700; /* Título em dourado */
+}
+
+.w3-wide {
+    font-weight: bold;
+}
+
+/* Progresso das habilidades */
+.w3-white {
+    background: #333;
+    border-radius: 5px;
+}
+
+.w3-dark-grey {
+    background: #000;
+}
+
+/* ---------------------- Fotos ---------------------- */
+
+#w3-row-padding {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#w3-row-padding img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    margin: 10px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* ---------------------- Footer ---------------------- */
+
+/* Footer */
+footer {
+    background-color: #000;
+    color: #ffd700;
+    padding: 32px;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer .fab {
+    font-size: 36px;
+    margin-right: 10px;
+    vertical-align: middle;
+    transition: transform 0.2s;
+}
+
+footer .fab:hover {
+    transform: scale(1.1);
+}
+
+/* Links e botões */
+.w3-bar-item,
+.w3-button {
+    color: #ffd700 !important;
+    text-align: center;
+    padding: 16px;
+}
+
+/* Hover Links */
+.w3-bar-item:hover,
+.w3-button:hover {
+    background-color: #444;
+    text-decoration: none;
+}
+
+/* Botões de Navegação do Navbar */
+.w3-top .w3-bar-item {
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px;
+}
+
+/* Responsividade */
+@media only screen and (max-width: 768px) {
+    .w3-sidebar {
+        width: 100%;
+        position: relative;
+        height: auto;
+        overflow: hidden;
+    }
+
+    header.w3-container {
+        text-align: center;
+        padding: 20px;
+    }
+}
+
+/* ----------------------------- Swiper - Carrossel ---------------------- */
+
+/* Ajuste das imagens no carrossel */
+.img-small {
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+    margin: auto;
+}
+
+/* Container do Swiper */
+.swiper-container {
+    max-width: 900px;
+    height: 500px;
+    margin: auto;
+}
+
+/* Melhor espaçamento das imagens */
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.w3-image {
+    object-fit: contain; /* Garante que a imagem se ajuste dentro do espaço sem ser cortada. */
+    max-width: 90%;
+    max-height: 500px;
+}
+
+
+/* Detalhes extras */
+a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #ffd700;
+}
+
+/* ----------------------------- Card ---------------------- */
+
+/* Cards com imagem e descrição */
+.w3-card-4 {
+    transition: 0.3s;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #222;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    max-width: 350px;
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    object-fit: cover;
+}
+
+/* Ajusta a imagem do card para manter proporção */
+.w3-card-4 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Hover Effect */
+.w3-card-4:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #ffd700;
+}
+
+/* Texto do Card */
+.w3-card-4 h3 {
+    font-weight: bold;
+    color: #ffd700;
+    margin: 10px 0;
+}
+
+.w3-card-4 p {
+    font-size: 16px;
+    color: #ccc;
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* Responsividade */
+@media only screen and (max-width: 768px) {
+    .w3-row-padding {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .w3-card-4 {
+        width: 90%;
+        height: auto;
+        margin: 10px;
+    }
+}
+
+/* Colocar os cards um ao lado do outro */
+.w3-row-padding {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 20px; /* Espaço entre os cards */
+    overflow-x: auto; /* Adiciona rolagem horizontal se necessário */
+    padding: 20px;
+}
+
+.w3-card-4 {
+    transition: 0.3s;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #222;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    max-width: 300px; /* Mantém os cards com tamanho consistente */
+    min-width: 280px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Ajusta a imagem do card para manter proporção */
+.w3-card-4 img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Hover Effect */
+.w3-card-4:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #ffd700;
+}
+
+/* Texto do Card */
+.w3-card-4 h3 {
+    font-weight: bold;
+    color: #ffd700;
+    margin: 10px 0;
+}
+
+.w3-card-4 p {
+    font-size: 16px;
+    color: #ccc;
+    text-align: center;
+    line-height: 1.5;
+}

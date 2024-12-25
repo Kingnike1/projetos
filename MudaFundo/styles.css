@@ -1,0 +1,43 @@
+body {
+    background-color: red;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-top: 20%;
+    transition: background-color 0.5s ease;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Estilo para a mensagem secreta */
+#secretMessage {
+    font-weight: bold;
+    margin-top: 20px;
+    display: none; /* Começa invisível */
+    color: transparent;
+    font-size: 50px;
+    text-transform: uppercase;
+    -webkit-text-stroke: 3px rgb(255, 255, 255);
+}
+
+/* Classe para tornar a mensagem visível */
+.hidden {
+    display: none;
+}
+
+/* Estilos para fontes coloridas e animadas */
+.colorful-text {
+    animation: colorChange 1s infinite; /* Animação para mudança de cor */
+}
+
+@keyframes colorChange {
+    0% { color: red; }
+    25% { color: yellow; }
+    50% { color: green; }
+    75% { color: blue; }
+    100% { color: purple; }
+}

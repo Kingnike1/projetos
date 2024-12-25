@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Menu de Navegação */
+nav {
+    background-color: #007BFF;
+    color: white;
+    padding: 20px;
+    height: 100%;
+    width: 20%;
+    box-sizing: border-box;
+}
+
+nav h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li {
+    margin: 15px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: #0056b3;
+}
+
+/* Main Dashboard */
+main {
+    padding: 20px;
+    width: 80%;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+
+main h1 {
+    text-align: center;
+    font-weight: bold;
+}
+
+#resumo {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#resumo h2 {
+    text-align: center;
+    font-weight: bold;
+}
+
+#destaques p {
+    font-size: 18px;
+    margin: 10px;
+}
+
+#mensagem-inspiradora {
+    font-style: italic;
+    color: #666;
+    padding: 15px;
+    background: #e9ecef;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 10px;
+}

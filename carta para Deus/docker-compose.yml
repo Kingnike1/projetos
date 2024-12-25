@@ -1,0 +1,53 @@
+version: "3.7"
+
+services:
+  app:
+    build: .
+    ports:
+      - "8080:80"
+    environment:
+      - SMTP_HOST=smtp.gmail.com
+      - SMTP_PORT=587
+      - SMTP_AUTH=true
+      - SMTP_USERNAME=testedev19@gmail.com
+      - SMTP_PASSWORD=teste123!
+    depends_on:
+      - db
+    networks:
+      - app_network
+
+  php:
+    build: .
+    container_name: "php"
+    image: php:8.1.16-apache
+    volumes:
+      - ./:/var/www/html/
+    ports:
+      - "83:80"
+    depends_on:
+      - db
+    networks:
+      - app_network
+
+  db:
+    image: mariadb:10.5
+    container_name: "mariadb"
+    restart: always
+    volumes: 
+      - mariadb_data:/var/lib/mysql
+    environment:
+      - MARIADB_ROOT_PASSWORD=123
+      - MARIADB_DATABASE=seu_banco
+      - MARIADB_USER=usuario
+      - MARIADB_PASSWORD=senha
+    ports:
+      - "3307:3306"
+    networks:
+      - app_network
+
+volumes:
+  mariadb_data:
+
+networks:
+  app_network:
+    driver: bridge

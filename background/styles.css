@@ -1,0 +1,37 @@
+.image-background {
+    background-image: url('https://img.odcdn.com.br/wp-content/uploads/2021/07/Lua.jpg');    /* Outras propriedades conforme necessário */
+}
+.gradient-image {
+    background: linear-gradient(to right, rgba(255, 0, 0, 0.5), rgba(0, 0, 255, 0.5)), url('caminho-da-imagem2.jpg');
+}
+.blur-text {
+    background-image: url('https://img.odcdn.com.br/wp-content/uploads/2021/07/Lua.jpg');    filter: blur(3px); /* Adiciona um efeito de desfoque à imagem de fundo */
+}
+.fill-text {
+    background-image: url('https://img.odcdn.com.br/wp-content/uploads/2021/07/Lua.jpg');    background-size: contain; /* Ajusta a imagem para caber no texto */
+}
+.animated-text {
+    background-image: url('https://img.odcdn.com.br/wp-content/uploads/2021/07/Lua.jpg');    animation: slide 5s infinite; /* Cria uma animação de deslizamento */
+}
+
+@keyframes slide {
+    from { background-position: 0; }
+    to { background-position: 100%; }
+}
+.shadow-text {
+    background-image: url('https://img.odcdn.com.br/wp-content/uploads/2021/07/Lua.jpg');        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adiciona uma sombra ao texto */ /* Adiciona uma sombra ao texto */
+}
+.parallax-text {
+    background-image: url('https://img.odcdn.com.br/wp-content/uploads/2021/07/Lua.jpg');    background-attachment: fixed; /* Cria um efeito parallax */
+    background-size: cover;
+}
+.decorative-text {
+    border: 5px solid rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    background-image: url('https://img.odcdn.com.br/wp-content/uploads/2021/07/Lua.jpg');}
+.color-filter-text {
+    background-image: url('https://img.odcdn.com.br/wp-content/uploads/2021/07/Lua.jpg');    filter: sepia(1); /* Adiciona um filtro de cor à imagem de fundo */
+}
+.repeated-background {
+    background-image: url('https://img.odcdn.com.br/wp-content/uploads/2021/07/Lua.jpg');    background-repeat: repeat; /* Faz a imagem de fundo se repetir */
+}

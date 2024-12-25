@@ -1,0 +1,117 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card 3D Interativo</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+  
+      body {
+        background-color: #ecf0f1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+      }
+  
+      .card-container {
+        perspective: 1500px; /* Distância da visão 3D */
+      }
+  
+      .card {
+        width: 300px;
+        height: 400px;
+        background-color: #fff;
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        transform-style: preserve-3d;
+        transition: transform 0.1s;
+        position: relative;
+      }
+  
+      .card .face {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #3498db;
+        border-radius: 15px;
+        backface-visibility: hidden; /* Oculta a face traseira */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: 24px;
+      }
+  
+      .card .front {
+        background-color: #3498db;
+      }
+  
+      .card .back {
+        background-color: #2ecc71;
+        transform: rotateY(180deg);
+      }
+  
+      .card .left {
+        background-color: #e74c3c;
+        transform: rotateY(-90deg);
+      }
+  
+      .card .right {
+        background-color: #f39c12;
+        transform: rotateY(90deg);
+      }
+  
+      .card .top {
+        background-color: #9b59b6;
+        transform: rotateX(90deg);
+      }
+  
+      .card .bottom {
+        background-color: #1abc9c;
+        transform: rotateX(-90deg);
+      }
+  
+    </style>
+  </head>
+  <body>
+    <div class="card-container">
+      <div class="card">
+        <div class="face front">Frente</div>
+        <div class="face back">Trás</div>
+        <div class="face left">Esquerda</div>
+        <div class="face right">Direita</div>
+        <div class="face top">Cima</div>
+        <div class="face bottom">Base</div>
+      </div>
+    </div>
+  
+    <script>
+      const card = document.querySelector('.card');
+  
+      // Adiciona um ouvinte de evento para o movimento do mouse
+      card.addEventListener('mousemove', (e) => {
+        const cardRect = card.getBoundingClientRect();
+        const mouseX = e.clientX - cardRect.left;
+        const mouseY = e.clientY - cardRect.top;
+  
+        // Calcula os ângulos de rotação com base na posição do mouse
+        const rotateX = ((mouseY / cardRect.height) - 0.5) * 30; // 30° máximo
+        const rotateY = ((mouseX / cardRect.width) - 0.5) * -30; // -30° máximo
+  
+        // Aplica a rotação ao card
+        card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+      });
+  
+      // Reseta a rotação quando o mouse sai do card
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = `rotateX(0deg) rotateY(0deg)`;
+      });
+    </script>
+  </body>
+  </html>
+  

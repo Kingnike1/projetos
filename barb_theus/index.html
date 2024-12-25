@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Barbearia do Theus</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="w3-black">
+    <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+        <img src="./img/dono2.png" style="width:100%">
+        <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+            <i class="fa fa-home w3-xxlarge"></i>
+            <p>INÍCIO</p>
+        </a>
+        <a href="#sobre" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+            <i class="fa fa-user w3-xxlarge"></i>
+            <p>SOBRE</p>
+        </a>
+        <a href="#fotos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+            <i class="fa fa-eye w3-xxlarge"></i>
+            <p>FOTOS</p>
+        </a>
+        <a href="#contato" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+            <i class="fa fa-envelope w3-xxlarge"></i>
+            <p>CONTATO</p>
+        </a>
+    </nav>
+
+    <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+        <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+            <a href="#" class="w3-bar-item w3-button" style="width:25% !important">INÍCIO</a>
+            <a href="#sobre" class="w3-bar-item w3-button" style="width:25% !important">SOBRE</a>
+            <a href="#fotos" class="w3-bar-item w3-button" style="width:25% !important">FOTOS</a>
+            <a href="#contato" class="w3-bar-item w3-button" style="width:25% !important">CONTATO</a>
+        </div>
+    </div>
+
+    <div class="w3-padding-large" id="main">
+        <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+            <h1 class="w3-jumbo">Bem-vindo à Barbearia do Theus</h1>
+            <p>Onde estilo e cuidado se encontram.</p>
+            <img src="./img/dono.png" alt="barbearia" class="w3-image" width="992px" height="1108px">
+        </header>
+
+        <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="sobre">
+            <h2 class="w3-text-light-grey">Sobre Nós</h2>
+            <hr style="width:200px" class="w3-opacity">
+            <p>A Barbearia do Theus oferece os melhores serviços de cuidados masculinos, com profissionais experientes e
+                um ambiente acolhedor. Venha nos visitar para viver a melhor experiência de barbearia.</p>
+            <h2 class="w3-padding-16 w3-text-light-grey">Minhas Habilidades</h2>
+            <div>
+                <div class="w3-content w3-padding-64" id="cortes">
+                    <h4 class="w3-text-light-grey">Tipos de Corte de Cabelo</h4>
+                    <hr style="width:200px" class="w3-opacity">
+                    <div class="w3-row-padding w3-grayscale">
+                        <!-- Card 1 -->
+                        <div class="w3-card-4">
+                            <img src="./img/corte/Fade Clássico.jpeg" alt="Fade Clássico">
+                            <div class="w3-container">
+                                <h3>Fade Clássico</h3>
+                                <p>Transição suave entre os lados e o topo.</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="w3-card-4">
+                            <img src="./img/corte/Undercut.jpeg" alt="Undercut">
+                            <div class="w3-container">
+                                <h3>Undercut</h3>
+                                <p>Laterais baixas e a parte superior volumosa.</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="w3-card-4">
+                            <img src="./img/corte/Bald_Mohawk_Fade_Haircut_for_Men_1.webp" alt="Mohawk">
+                            <div class="w3-container">
+                                <h3>Mohawk</h3>
+                                <p>Estilo ousado e impactante.</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="w3-card-4">
+                            <img src="./img/corte/Pompadour.jpeg" alt="Pompadour">
+                            <div class="w3-container">
+                                <h3>Pompadour</h3>
+                                <p>Topete sofisticado e elegante.</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 5 -->
+                        <div class="w3-card-4">
+                            <img src="./img/corte/Buzz Cut.jpg" alt="Buzz Cut">
+                            <div class="w3-container">
+                                <h3>Buzz Cut</h3>
+                                <p>Estilo prático e minimalista.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-content w3-padding-64" id="barbas">
+                <h4 class="w3-text-light-grey">Estilos de Barba</h4>
+                <hr style="width:200px" class="w3-opacity">
+                <div class="w3-row-padding w3-grayscale">
+
+                    <div class="w3-card-4">
+                        <img src="./img/barba/Full_Beard.jpg" alt="Barba Completa">
+                        <div class="w3-container">
+                            <h3>Barba Completa</h3>
+                            <p>Barba cheia e volumosa para um visual clássico.</p>
+                        </div>
+                    </div>
+                    <!-- Card 1 -->
+                    <div class="w3-card-4">
+                        <img src="./img/barba/Light_Stubble.jpeg" alt="Barba Leve">
+                        <div class="w3-container">
+                            <h3>Barba Leve(Stubble)</h3>
+                            <p>Look natural e elegante com barba curta.</p>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+
+                    <!-- Card 3 -->
+                    <div class="w3-card-4">
+                        <img src="./img/barba/Van_Dyke.jpg" alt="Van Dyke">
+                        <div class="w3-container">
+                            <h3>Van Dyke</h3>
+                            <p>Cavanhaque pontiagudo e um bigode marcante.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="w3-card-4">
+                        <img src="./img/barba/Garibaldi.jpg" alt="Garibaldi">
+                        <div class="w3-container">
+                            <h3>Garibaldi</h3>
+                            <p>Barba arredondada para um visual moderno e casual.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="w3-card-4">
+                        <img src="./img/barba/ducktail.jpg" alt="Ducktail">
+                        <div class="w3-container">
+                            <h3>Ducktail</h3>
+                            <p>Estilo elegante com barba pontiaguda no queixo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Seção Fotos com Swiper -->
+
+    <div class="w3-padding-64 w3-content" id="fotos">
+        <h2 class="w3-text-light-grey">Nossas Fotos</h2>
+        <hr style="width:200px" class="w3-opacity">
+
+        <!-- Container do Swiper -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./img/corte5.png" alt="Corte" class="w3-image img-small">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./img/corte4.png" alt="Corte" class="w3-image img-small">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./img/corte3.png" alt="Corte" class="w3-image img-small">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./img/corte.png" alt="Corte" class="w3-image img-small">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./img/corte6.png" alt="Corte" class="w3-image img-small">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="w3-padding-64 w3-content w3-center" id="localizacao">
+        <div class="w3-padding-64 w3-content w3-center" id="localizacao">
+            <h2 class="w3-text-light-grey">Nossa Localização</h2>
+            <hr style="width:200px" class="w3-opacity">
+            <!-- Mapa do Google Maps -->
+            <div style="width:100%; height:300px; margin-top:16px;">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62125.08355889593!2d-49.606059425561546!3d-15.308721969494492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935c9ac98b477aff%3A0x840f435462bb3576!2sIF%20Goiano%20-%20Campus%20Ceres!5e0!3m2!1spt-BR!2sbr!4v1691938929123!5m2!1spt-BR!2sbr"
+                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            <!-- Botão de Agendamento -->
+            <div style="margin-top:24px;">
+                <a href="https://wa.me/551112345678?text=Olá!+Gostaria+de+agendar+um+horário." target="_blank"
+                    class="w3-button w3-padding-large" style="text-decoration:none; font-size:18px;">
+                    <i class="fab fa-whatsapp"></i> Agende seu horário agora
+                </a>
+            </div>
+    
+        </div>
+    </div>
+    <div>
+        <footer class="w3-container w3-padding-32 w3-center w3-black" id="contato">
+            <h4>Contato</h4>
+            <p>Instituto Federal Goiano - Campus Ceres, GO-154, km 218 - Zona Rural, Ceres - GO, 76300-000</p>
+            <p>Email: <a href="mailto:contato@barbeariadotheus.com" style="color: #ffd700;">contato@barbeariadotheus.com</a>
+            </p>
+            <p>Telefone: <a href="tel:+551112345678" style="color: #ffd700;">(11) 1234-5678</a></p>
+
+            <!-- Redes sociais -->
+            <div>
+                <a href="https://www.instagram.com/" target="_blank"
+                    style="color: #ffd700; margin-right: 16px; font-size: 24px;">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+                <a href="https://wa.me/551112345678" target="_blank" style="color: #ffd700; font-size: 24px;">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+            </div>
+        </footer>
+
+    </div>
+
+
+
+        <!-- Adicione os arquivos do Swiper -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+        <!-- Inicialização do Swiper -->
+        <script src="./js/swiper.js"></script>
+</body>
+
+</html>

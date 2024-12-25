@@ -1,0 +1,67 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #f8d2e0, #f5e6c8); 
+    font-family: 'Georgia', serif;
+    position: relative; 
+    overflow: hidden; 
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: #800020;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+.pedido-button {
+    padding: 15px 30px;
+    font-size: 18px;
+    color: white;
+    background-color: #e74c3c; /* Cor do botão */
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+}
+
+.pedido-button:hover {
+    background-color: #c0392b; /* Cor do botão ao passar o mouse */
+    transform: translateY(-3px);
+}
+
+.pedido-button:active {
+    transform: translateY(1px);
+}
+
+/* Texto do pedido */
+.pedido-text {
+    font-size: 1.2em;
+    color: #555;
+    margin: 20px 0;
+    text-align: center;
+    max-width: 600px;
+    line-height: 1.5;
+}
+
+/* Estilo para as imagens de coração */
+.heart {
+    position: absolute;
+    width: 50px; /* Largura do coração */
+    height: 50px; /* Altura do coração */
+    animation: float 3s ease-in-out infinite; /* Animação de flutuação */
+}
+
+/* Animação de flutuação */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}

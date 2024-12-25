@@ -1,0 +1,138 @@
+/* styles.css */
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 10;
+    padding: 10px 20px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #ff6f61;
+}
+
+/* Seções */
+.section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.parallax {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+#section1 {
+    background-image: url('https://wallpapers.com/images/hd/moon-retro-vector-art-7op8fanjrtajdzp0.jpg');
+}
+
+#section3 {
+    background-image: url('https://i.pinimg.com/originals/f9/f6/9f/f9f69f9f491fc8493ca3265c18d78447.jpg');
+}
+
+.content {
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 50px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: white;
+}
+/* Efeitos de aparição */
+.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Indicadores de ScrollMagic (apenas para depuração) */
+.sm-indicators {
+    position: fixed;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+.sm-indicators > div {
+    border: 1px solid red;
+    background: rgba(255, 0, 0, 0.2);
+    color: red;
+}
+/* Botões */
+button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #e65a50;
+    transform: scale(1.05);
+}
+/* Imagens com animação */
+.image {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    display: block;
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.image.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
