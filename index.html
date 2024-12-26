@@ -1,93 +1,269 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <meta http-equiv="refresh" content="10;url=https://www.exemplo.com"> -->
-    <title>Redirecionamento com Vários Links</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
-      rel="stylesheet" />
-    <style>
-      /* Estilo básico da página */
-      body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-        background-color: #121212;
-        color: #fff;
-        font-family: "Poppins", sans-serif;
-        text-align: center;
-        flex-direction: column;
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redirecionamento com Vários Links</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    /* Estilo básico da página */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+      color: #fff;
+      font-family: "Poppins", sans-serif;
+      text-align: center;
+      flex-direction: column;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #ff9900;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      animation: fadeInDown 1s ease-in-out;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+      color: #e0e0e0;
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    .links-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 15px 10px;
+      text-align: center;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .card a {
+      font-size: 1.1rem;
+      color: #ff9900;
+      text-decoration: none;
+      font-weight: bold;
+      display: block;
+      margin-top: 10px;
+      transition: color 0.3s ease;
+    }
+
+    .card a:hover {
+      color: #fff;
+    }
+
+    .card img {
+      width: 100%;
+      /* Faz a imagem ocupar toda a largura do card */
+      height: auto;
+      /* Mantém a proporção original da imagem */
+      border-radius: 8px;
+      /* Adiciona bordas arredondadas para combinar com o card */
+      object-fit: cover;
+      /* Faz a imagem preencher o card sem distorcer */
+    }
+
+
+    @keyframes fadeInDown {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
       }
 
-      h1 {
-        font-size: 3rem;
-        margin-bottom: 20px;
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
       }
 
-      p {
-        font-size: 1.2rem;
-        margin-bottom: 20px;
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .spinner {
+      margin-top: 30px;
+      width: 50px;
+      height: 50px;
+      border: 6px solid rgba(255, 255, 255, 0.3);
+      border-top: 6px solid #ff9900;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
       }
 
-      .link {
-        font-size: 1.2rem;
-        color: #ff9900;
-        text-decoration: none;
-        margin: 5px;
-        display: block;
+      100% {
+        transform: rotate(360deg);
       }
+    }
+  </style>
 
-      .spinner {
-        margin-top: 30px;
-        width: 50px;
-        height: 50px;
-        border: 6px solid rgba(255, 255, 255, 0.3);
-        border-top: 6px solid #ff9900;
-        border-radius: 50%;
-        animation: spin 1s linear infinite;
-      }
 
-      @keyframes spin {
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(360deg);
-        }
-      }
+</head>
 
-      .links-container {
-        margin-top: 20px;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Você está sendo redirecionado...</h1>
-    <p>Se não for redirecionado automaticamente</p>
+<body>
+  <h1>Você está sendo redirecionado...</h1>
+  <p>Se não for redirecionado automaticamente</p>
 
-    <div class="links-container">
-      <a href="./animaçoes/animacao_efeito_digitacao.html"
-        class="link">Animações - Efeito Digitação</a>
+  <div class="links-container">
+    <div class="card">
+      <img src="Add Border in Text HTML CSS Codehal.png" alt="">
+      <a href="./add border in text html css/index.html" class="link">Texto com borda</a>
+    </div>
+    <div class="card">
+      <img src="Animated Input Field Codehal.png">
+      <a href="animated input field/index.html" class="link">Efeito no placeholder</a>
+    </div>
+    <div class="card">
+      <img src="Animated Login Form using HTML CSS Only Codehal.png">
+      <a href="Animated Login Form using HTML and CSS Only/index.html" class="link">Formulário Login animado</a>
+    </div>
+    <div class="card">
+      <img src="Exemplo de Animações e Efeito de Digitação.png">
+      <a href="./animaçoes/animacao_efeito_digitacao.html" class="link">Animações - Efeito Digitação</a>
+    </div>
+    <div class="card">
+      <img src="Exemplos de Texto com Imagem de Fundo.png">
       <a href="./background/index.html" class="link">Background</a>
-      <a href="./barb_theus/index.html" class="link">Barbearia do theus</a>
-      <a href="./biblico/index.html" class="link">Biblia</a>
-
+    </div>
+    <div class="card">
+      <img src="Barbearia do Theus.png">
+      <a href="./barb_theus/index.html" class="link">Barbearia do Theus</a>
+    </div>
+    <div class="card">
+      <img src="Versículos Aleatórios.png">
+      <a href="./biblico/index.html" class="link">Bíblia</a>
+    </div>
+    <div class="card">
+      <img src="Nike.png">
       <a href="./card/index.html" class="link">Card</a>
-      <a href="./escuro e claro/escuro_claro.html" class="link">Escuro e
-        Claro</a>
+    </div>
+    <div class="card">
+      <img src="Water Drop Card Slider HTML CSS JS Codehal.png">
+      <a href="./card slider water drop/index.html" class="link">Carrossel Aquático</a>
+    </div>
+    <div class="card">
+      <img src="arvore 2.png">
+      <a href="./christmas_tree_animation/17/christmas_tree.html" class="link">Árvore de Natal</a>
+    </div>
+    <div class="card">
+      <img src="Interactive dragon.png">
+      <a href="./dragao_interativo/interactive dragon.html" class="link">Dragão Interativo</a>
+    </div>
+    <div class="card">
+      <img src="drawing flowers with Greensock.png">
+      <a href="dist/index.html" class="link">Flores</a>
+    </div>
+    <div class="card">
+      <img src="MiniProject.png">
+      <a href="first-project-main/index.html" class="link">Restaurante</a>
+    </div>
+    <div class="card">
+      <img src="Alternar Tema.png">
+      <a href="./escuro e claro/escuro_claro.html" class="link">Escuro e Claro</a>
+    </div>
+    <div class="card">
+      <img src="1Document.png">
       <a href="./escuro_claro/index.html" class="link">Escuro Claro</a>
-      <a href="./pomodoro/index.html" class="link">Background</a>
-
+    </div>
+    <div class="card">
+      <img src="Login Form.png">
+      <a href="Glassmorphism_Login_Form_Code/14) Glassmorphism Login Form/index.html" class="link">Estilo de
+        Formulário</a>
+    </div>
+    <div class="card">
+      <img src="Multiple Text Typing Animation Codehal.png">
+      <a href="Multiple Text Typing Animation/index.html" class="link">Efeito Digitação</a>
+    </div>
+    <div class="card">
+      <img src="Happy New Year 2023.png">
+      <a href="new year project (1)/new year project/index.html" class="link">Ano Novo</a>
+    </div>
+    <div class="card">
+      <img src="Parallax Effect Codehal.png">
+      <a href="./parallax effect/index.html" class="link">Efeito Parallax</a>
+    </div>
+    <div class="card">
+      <img src="Técnica Pomodoro.png">
+      <a href="./pomodoro/index.html" class="link">Pomodoro</a>
+    </div>
+    <div class="card">
+      <img src="Document.png">
+      <a href="./radical/index.html" class="link">Menu</a>
+    </div>
+    <div class="card">
+      <img src="Rotating xMas tree.png">
+      <a href="./rotating_chrismas_tree/20/rotating-chrismas-mas-tree.html" class="link">Árvore Rotativa</a>
+    </div>
+    <div class="card">
+      <img src="Scroll Dinâmico Elaborado.png">
+      <a href="./scroll_dinamico/index.html" class="link">Scroll Dinâmico</a>
+    </div>
+    <div class="card">
+      <img src="Scenery Scroll Animation.png">
+      <a href="./13/scenery-scroll-animation.html" class="link">Scroll Animado</a>
+    </div>
+    <div class="card">
+      <img src="Cubo Interativo.png">
       <a href="./site3d/cubo.html" class="link">Site 3D - Cubo</a>
+    </div>
+    <!-- <div class="card">
+      <img src="">
       <a href="./slide/index.html" class="link">Slide</a>
+    </div> -->
+    <div class="card">
+      <img src="Space Web.png">
+      <a href="./Space-Web-main/index.html" class="link">Site da NASA</a>
+    </div>
+    <div class="card">
+      <img src="">
       <a href="./tabelas/index.php" class="link">Tabelas</a>
+    </div>
+    <div class="card">
+      <img src="Animated Text Hover Effect Codehal.png">
+      <a href="./text hover effect animation/index.html" class="link">Efeito Hover em Texto</a>
+    </div>
+    <!-- <div class="card">
+      <img src="">
       <a href="./transicao/index.html" class="link">Transição</a>
     </div>
+  </div> -->
 
-    <div class="spinner"></div>
-  </body>
+
+  <div class="spinner"></div>
+</body>
+
 </html>
