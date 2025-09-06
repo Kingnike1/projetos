@@ -1,0 +1,120 @@
+/* Fonte personalizada */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif; /* Fonte mais moderna */
+    background-color: #f9f9f9; /* Cor de fundo mais suave */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px; /* Bordas mais arredondadas */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
+}
+
+/* Título */
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem; /* Tamanho maior */
+    color: #333;
+}
+
+/* Tabela */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px; /* Espaçamento entre as linhas */
+    margin: 0 auto;
+}
+
+th, td {
+    padding: 12px 20px; /* Mais espaço nas células */
+    text-align: center;
+    border-radius: 6px; /* Bordas arredondadas */
+    border: 1px solid #ddd; /* Cor da borda mais suave */
+    background: #fdfdfd;
+}
+
+th {
+    background: #007bff; /* Cor de fundo mais chamativa */
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+    background: #f7f7f7; /* Linha alternada mais suave */
+}
+
+tr:hover {
+    background: #e0e0e0; /* Cor de hover suave */
+    transform: scale(1.02); /* Aumento leve ao passar o mouse */
+    transition: all 0.3s ease; /* Transição suave */
+}
+
+/* Situação */
+.aprovado {
+    color: green;
+    font-weight: bold;
+}
+
+.recuperação {
+    color: red;
+    font-weight: bold;
+}
+
+/* Inputs */
+input[type="number"] {
+    width: 70px; /* Aumentando a largura */
+    padding: 8px;
+    text-align: center;
+    border: 2px solid #ccc; /* Borda mais forte */
+    border-radius: 6px;
+    font-size: 1rem; /* Tamanho de fonte maior */
+    transition: all 0.3s ease;
+}
+
+input[type="number"]:focus {
+    border-color: #007bff; /* Borda azul ao focar */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Efeito de foco */
+}
+
+/* Botões */
+button {
+    margin-top: 20px;
+    padding: 12px 25px; /* Botões maiores */
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px; /* Bordas mais arredondadas */
+    cursor: pointer;
+    font-size: 1.1rem; /* Tamanho maior */
+    transition: background 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background: #0056b3; /* Cor mais escura ao passar o mouse */
+    transform: translateY(-2px); /* Efeito de elevação */
+}
+
+button:active {
+    transform: translateY(1px); /* Efeito de pressionamento */
+}
+
+/* Animação de fade-in na tabela */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+table[data-aos="fade-up"] {
+    animation: fadeIn 1s ease-in-out;
+}

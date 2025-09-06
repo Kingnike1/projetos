@@ -1,0 +1,75 @@
+/* Reseta margens, preenchimento e configura o box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos globais */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f9;
+}
+
+/* Container principal que envolve o formulário */
+.container {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos principais */
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos para o formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Estilos para os rótulos (labels) */
+label {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+/* Estilos para os campos de entrada (input, select, textarea) */
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Ajusta tamanho dos inputs numéricos */
+input[type="number"] {
+    width: 100px;
+}
+
+/* Estilos para o botão */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}

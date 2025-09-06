@@ -1,0 +1,6 @@
+/* Copyright (c) 2025 by Louis Hoebregts (https://codepen.io/Mamboleoo/pen/MWoexGB) */
+body {
+    margin: 0;
+    overflow: hidden;
+    background: radial-gradient(circle, rgb(3, 155, 229) 20%, rgb(1, 51, 75) 120%);
+  }

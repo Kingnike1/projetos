@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Documento</title>
+</head>
+<body>
+<!-- 
+Por favor, observe que você pode aplicar .m--global-blending-active a .fnc-slider 
+para ativar o modo de mesclagem para todas as imagens de fundo ou aplicar .m--blend-bg-active
+a alguns slides específicos (.fnc-slide). Está desativado por padrão neste exemplo,
+porque requer imagens específicas, onde mais de 50% do fundo é transparente ou monocromático.
+-->
+<div class="demo-cont">
+    <!-- início do slider -->
+    <div class="fnc-slider example-slider">
+      <div class="fnc-slider__slides">
+        <!-- início do slide -->
+        <div class="fnc-slide m--blend-green m--active-slide">
+          <div class="fnc-slide__inner">
+            <div class="fnc-slide__mask">
+              <div class="fnc-slide__mask-inner"></div>
+            </div>
+            <div class="fnc-slide__content">
+              <h2 class="fnc-slide__heading">
+                <div class="fnc-slide__heading-line">
+                  <span>Viúva</span>
+                </div>
+                <div class="fnc-slide__heading-line">
+                  <span>Negra</span>
+                </div>
+              </h2>
+              <button type="button" class="fnc-slide__action-btn">
+                Créditos
+                <span data-text="Créditos">Créditos</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- fim do slide -->
+        <!-- início do slide -->
+        <div class="fnc-slide m--blend-dark">
+          <div class="fnc-slide__inner">
+            <div class="fnc-slide__mask">
+              <div class="fnc-slide__mask-inner"></div>
+            </div>
+            <div class="fnc-slide__content">
+              <h2 class="fnc-slide__heading">
+                <div class="fnc-slide__heading-line">
+                  <span>Capitão</span>
+                </div>
+                <div class="fnc-slide__heading-line">
+                  <span>América</span>
+                </div>
+              </h2>
+              <button type="button" class="fnc-slide__action-btn">
+                Créditos
+                <span data-text="Créditos">Créditos</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- fim do slide -->
+        <!-- início do slide -->
+        <div class="fnc-slide m--blend-red">
+          <div class="fnc-slide__inner">
+            <div class="fnc-slide__mask">
+              <div class="fnc-slide__mask-inner"></div>
+            </div>
+            <div class="fnc-slide__content">
+              <h2 class="fnc-slide__heading">
+                <div class="fnc-slide__heading-line">
+                  <span>Homem</span>
+                </div>
+                <div class="fnc-slide__heading-line">
+                  <span>De Ferro</span>
+                </div>
+              </h2>
+              <button type="button" class="fnc-slide__action-btn">
+                Créditos
+                <span data-text="Créditos">Créditos</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- fim do slide -->
+        <!-- início do slide -->
+        <div class="fnc-slide m--blend-blue">
+          <div class="fnc-slide__inner">
+            <div class="fnc-slide__mask">
+              <div class="fnc-slide__mask-inner"></div>
+            </div>
+            <div class="fnc-slide__content">
+              <h2 class="fnc-slide__heading">
+                <div class="fnc-slide__heading-line">
+                  <span>Thor</span>
+                </div>
+                <div class="fnc-slide__heading-line">
+                  <span>Apenas Thor</span>
+                </div>
+              </h2>
+              <button type="button" class="fnc-slide__action-btn">
+                Créditos
+                <span data-text="Créditos">Créditos</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- fim do slide -->
+      </div>
+      <nav class="fnc-nav">
+        <div class="fnc-nav__bgs">
+          <div class="fnc-nav__bg m--navbg-green m--active-nav-bg"></div>
+          <div class="fnc-nav__bg m--navbg-dark"></div>
+          <div class="fnc-nav__bg m--navbg-red"></div>
+          <div class="fnc-nav__bg m--navbg-blue"></div>
+        </div>
+        <div class="fnc-nav__controls">
+          <button class="fnc-nav__control">
+            Viúva Negra
+            <span class="fnc-nav__control-progress"></span>
+          </button>
+          <button class="fnc-nav__control">
+            Capitão América
+            <span class="fnc-nav__control-progress"></span>
+          </button>
+          <button class="fnc-nav__control">
+            Homem de Ferro
+            <span class="fnc-nav__control-progress"></span>
+          </button>
+          <button class="fnc-nav__control">
+            Thor
+            <span class="fnc-nav__control-progress"></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+    <!-- fim do slider -->
+    <div class="demo-cont__credits">
+      <div class="demo-cont__credits-close"></div>
+      <h2 class="demo-cont__credits-heading">Feito por</h2>
+      <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/142996/profile/profile-512_5.jpg" alt="" class="demo-cont__credits-img" />
+      <h3 class="demo-cont__credits-name">Nikolay Talanov</h3>
+      <a href="https://codepen.io/suez/" target="_blank" class="demo-cont__credits-link">Meu Codepen</a>
+      <a href="https://twitter.com/NikolayTalanov" target="_blank" class="demo-cont__credits-link">Meu Twitter</a>
+      <h2 class="demo-cont__credits-heading">Baseado em</h2>
+      <a href="https://dribbble.com/shots/2375246-Fashion-Butique-slider-animation" target="_blank" class="demo-cont__credits-link">Conceito por Kreativa Studio</a>
+      <h4 class="demo-cont__credits-blend">Modo de Mesclagem Global</h4>
+      <div class="colorful-switch">
+        <input type="checkbox" class="colorful-switch__checkbox js-activate-global-blending" id="colorful-switch-cb" />
+        <label class="colorful-switch__label" for="colorful-switch-cb">
+          <span class="colorful-switch__bg"></span>
+          <span class="colorful-switch__dot"></span>
+          <span class="colorful-switch__on">
+            <span class="colorful-switch__on__inner"></span>
+          </span>
+          <span class="colorful-switch__off"></span>
+        </label>
+      </div>
+    </div>
+  </div>
+    <script src="main.js"></script>
+</body>
+</html>

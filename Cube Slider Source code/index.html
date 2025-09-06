@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Nunito:wght@300;600&display=swap");
+
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Nunito", sans-serif;
+        }
+
+        body {
+            background-color: #000;
+            display: grid;
+            place-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .swiper {
+            position: relative;
+            width: 400px; height: 490px;
+        }
+
+        .swiper-slide {
+            position: relative;
+            background-position: center;
+            background-size: cover;
+            border: 1px solid 
+            rgba(255, 255, 255, 0.3);
+            user-select: none;
+            border-radius: 20px;
+        }
+
+        .cost {
+            position: absolute;
+            top: 8px;
+            right: 6px;
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+            border-radius: 30px;
+            padding: 6px 10px;
+            color: #fff;
+            font-size: clamp(0.8rem, 4vw, 0.9rem);
+            font-weight: 600;
+        }
+
+        .dark-text {
+            color: #202134;
+        }
+        .swiper-slide img {
+            width: 100%; height: 100%;
+            border-radius: 20px;
+        }
+
+        .overlay {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            left: 0; bottom: 0;
+            width: 100%; height: 150px;
+            padding: 10px 20px;
+            background: rgba(93, 95, 145, 0.2);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-top: 1px solid 
+            rgba(255, 255, 255, 0.3);
+            color: #fff;
+            border-radius: 0 0 20px 20px;
+        }
+
+        .overlay h1 {
+            font-size: clamp(1.2rem, 4vw, 1.5rem);
+            font-weight: 600;
+        }
+        
+        .overlay p {
+            font-size: clamp(0.8rem, 4vw, 0.9rem);
+            font-weight: 300;
+            line-height: 1.3;
+        }
+
+        .ratings {
+            display: flex;
+            column-gap: 10px;
+            margin-top: -6px;
+        }
+        .ratings span {
+            font-size: clamp(0.8rem, 4vw, 0.9rem);
+            font-weight: 300;
+        }
+        .star {
+            color: #afe312;
+        }
+        @media (max-width: 1050px) {
+            .swiper {
+                width: 350px;
+                height: 450px;
+            }
+        }
+
+
+        @media (max-width: 930px) {
+            section {
+                grid-template-columns: 100%;
+                grid-template-rows: 55% 40%;
+                grid-template-areas:
+                    "slider"
+                    "content";
+                place-items: center;
+                gap: 64px;
+                padding: 60px;
+            }
+
+            .swiper {
+                grid-area: slider;
+            }
+
+            .content {
+                grid-area: content;
+                text-align: center;
+            }
+
+            .content h1 {
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 470px) {
+            section {
+                padding: 40px 40px 60px;
+            }
+
+            .swiper {
+                width: 300px;
+                height: 400px;
+            }
+        }
+
+        
+        /* -- External Social Link CSS Styles -- */
+
+        #source-link {
+            top: 120px;
+        }
+
+        #source-link>i {
+            color: rgb(94, 106, 210);
+        }
+
+        #yt-link {
+            top: 65px;
+        }
+
+        #yt-link>i {
+            color: rgb(219, 31, 106);
+
+        }
+
+        #Fund-link {
+            top: 10px;
+        }
+
+        #Fund-link>i {
+            color: rgb(255, 251, 0);
+
+        }
+
+        .meta-link {
+            align-items: center;
+            backdrop-filter: blur(3px);
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            display: inline-flex;
+            gap: 5px;
+            left: 10px;
+            padding: 10px 20px;
+            position: fixed;
+            text-decoration: none;
+            transition: background-color 600ms, border-color 600ms;
+            z-index: 10000;
+        }
+
+        .meta-link:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .meta-link>i,
+        .meta-link>span {
+            height: 20px;
+            line-height: 20px;
+        }
+
+        .meta-link>span {
+            color: white;
+            font-family: "Rubik", sans-serif;
+            transition: color 600ms;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img
+                    src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/49db1b5f-09f6-4433-be57-51687585600c" />
+                <div class="cost">from $230 per group</div>
+                <div class="overlay">
+                    <h1>Walking Tour in Florence</h1>
+                    <p>
+                        Discover the fascinating beauty of this historic city by
+                        strolling through the rich cultural tapestry that makes Florence
+                        a timeless destination.
+                    </p>
+                    <div class="ratings">
+                        <div class="stars">
+                            <ion-icon class="star" name="star"></ion-icon>
+                            <ion-icon class="star" name="star"></ion-icon>
+                            <ion-icon class="star" name="star"></ion-icon>
+                            <ion-icon class="star" name="star"></ion-icon>
+                            <ion-icon class="star" name="star-half-outline"></ion-icon>
+                        </div>
+                        <span>138 reviews</span>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img
+                    src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/2d165721-fe2e-4cf0-a63e-20bc5bc3f847" />
+                <div class="cost">from $380 per group</div>
+                <div class="overlay">
+                    <h1>Edinburgh Guided Tour</h1>
+                    <p>
+                        Explore the city's majestic castles and fascinating history by
+                        joining our guided tour for an unforgettable journey through
+                        Scotland's capital.
+                    </p>
+                    <div class="ratings">
+                        <div class="stars">
+                            <ion-icon class="star" name="star"></ion-icon>
+                            <ion-icon class="star" name="star"></ion-icon>
+                            <ion-icon class="star" name="star"></ion-icon>
+                            <ion-icon class="star" name="star"></ion-icon>
+                            <ion-icon class="star" name="star"></ion-icon>
+                        </div>
+                        <span>307 reviews</span>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img
+                    src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/d311d1de-7382-4c03-b083-5f7e88458158" />
+                <div class="cost dark-text">from $99 per adult</div>
+                <div class="overlay">
+                    <h1>New York Sightseeing Tour</h1>
+                    <p>
+                        Experience the energy and excitement of New York City from Times
+                        Square's dazzling lights to the serene beauty of Central Park.
+                    </p>
+                    <div class="ratings">
+                        <div class="stars">
+                            <ion-icon class="star" name="star"></ion-icon>
+                            <ion-icon class="star" name="star"></ion-icon>
+                            <ion-icon class="star" name="star"></ion-icon>
+                            <ion-icon class="star" name="star"></ion-icon>
+                            <ion-icon class="star" name="star-half-outline"></ion-icon>
+                        </div>
+                        <span>1152 reviews</span>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img
+                    src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/be223a30-52d1-4a0b-8d57-2e52f02e2245" />
+                <div class="cost dark-text">from $117 per adult</div>
+                <div class="overlay">
+                    <h1>Japan Panoramic Tours</h1>
+                    <p>
+                        Embark on a magical journey through Tokyo by discovering the
+                        beauty of the city as cherry blossom trees paint the streets in
+                        hues of pink.
+                    </p>
+                    <div class="ratings">
+                        <div class="stars">
+                            <ion-icon class="star" name="star"></ion-icon>
+                            <ion-icon class="star" name="star"></ion-icon>
+                            <ion-icon class="star" name="star"></ion-icon>
+                            <ion-icon class="star" name="star"></ion-icon>
+                            <ion-icon class="star" name="star-outline"></ion-icon>
+                        </div>
+                        <span>619 reviews</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!--Social Liks codings below-->
+        <a id="source-link" class="meta-link" href="https://t.me/codewith_muhilan" target="_blank">
+            <i class="fas fa-link"></i>
+            <span class="roboto-mono">Join my Telegram</span>
+        </a>
+    
+        <a id="yt-link" class="meta-link" href="https://www.youtube.com/@codewith_muhilan?sub_confirmation=1"
+            target="_blank">
+            <i class="fab fa-youtube"></i>
+            <span> Subscribe my channel</span>
+        </a>
+    
+        <a id="Fund-link" class="meta-link" href="https://www.buymeacoffee.com/codewithmuhilan"
+            target="_blank">
+            <i class="fas fa-dollar-sign"></i>
+            <span> Show your Support..❤</span>
+        </a>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.26.0/dist/tsparticles.min.js"></script>
+    <script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script>
+        var swiper = new Swiper(".swiper", {
+            effect: "cube",
+            grabCursor: true,
+            loop: true,
+            speed: 1000,
+            cubeEffect: {
+                shadow: false,
+                slideShadows: true,
+                shadowOffset: 10,
+                shadowScale: 0.94,
+            },
+            autoplay: {
+                delay: 2600,
+                pauseOnMouseEnter: true,
+            },
+        });
+    </script>
+</body>
+</html>

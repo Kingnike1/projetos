@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estratégias para MegaGlest</title>
+    <style>
+        /* Resetando margens e preenchimento */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo global do corpo */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Cabeçalho */
+header {
+    background: linear-gradient(135deg, #1f3b4d, #4a6e84);
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Navegação */
+nav {
+    background-color: #333;
+    text-align: center;
+    padding: 15px 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 25px;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #ff6f61;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* Seção de estratégias */
+section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 30px;
+}
+
+/* Estilos únicos para cada artigo */
+
+/* Estratégia Básica */
+#estrategia1 {
+    background-color: #f1f8f7;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-left: 10px solid #4a6e84;
+    transition: all 0.3s ease;
+}
+
+#estrategia1 h2 {
+    font-size: 2.5rem;
+    color: #1f3b4d;
+    margin-bottom: 10px;
+}
+
+#estrategia1 p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Defesa e Expansão */
+#estrategia2 {
+    background-color: #fef9e4;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-left: 10px solid #ff6f61;
+    transition: all 0.3s ease;
+}
+
+#estrategia2 h2 {
+    font-size: 2.5rem;
+    color: #b4472d;
+    margin-bottom: 10px;
+}
+
+#estrategia2 p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Ataques Coordenados */
+#estrategia3 {
+    background-color: #e9f7fa;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-left: 10px solid #3a9e9d;
+    transition: all 0.3s ease;
+}
+
+#estrategia3 h2 {
+    font-size: 2.5rem;
+    color: #1f3b4d;
+    margin-bottom: 10px;
+}
+
+#estrategia3 p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Dicas Rápidas */
+#dicas {
+    background-color: #ffefdb;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-left: 10px solid #ff6f61;
+}
+
+#dicas h2 {
+    font-size: 2.5rem;
+    color: #b4472d;
+    margin-bottom: 10px;
+}
+
+#dicas ul {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+#dicas li {
+    margin-bottom: 10px;
+}
+
+/* Unidades */
+#unidades {
+    background-color: #e9f7fa;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-left: 10px solid #3a9e9d;
+}
+
+#unidades h2 {
+    font-size: 2.5rem;
+    color: #1f3b4d;
+    margin-bottom: 10px;
+}
+
+#unidades ul {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+#unidades li {
+    margin-bottom: 10px;
+}
+
+/* FAQ */
+#faq {
+    background-color: #f1f8f7;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-left: 10px solid #4a6e84;
+}
+
+#faq h2 {
+    font-size: 2.5rem;
+    color: #1f3b4d;
+    margin-bottom: 10px;
+}
+
+#faq dl {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+#faq dt {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#faq dd {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+/* Contato */
+#contato {
+    background-color: #ffefdb;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-left: 10px solid #ff6f61;
+}
+
+#contato h2 {
+    font-size: 2.5rem;
+    color: #b4472d;
+    margin-bottom: 10px;
+}
+
+#contato form {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+#contato input[type="text"], #contato textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#contato input[type="submit"] {
+    background-color: #ff6f61;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contato input[type="submit"]:hover {
+    background-color: #b4472d;
+}
+
+/* Estilo para a navegação */
+nav {
+    background-color: #333;
+    text-align: center;
+    padding: 15px 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 25px;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #ff6f61;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.8rem;
+    }
+
+    header p {
+        font-size: 1.1rem;
+    }
+
+    nav a {
+        font-size: 1rem;
+        margin: 0 15px;
+    }
+
+    section {
+        margin: 20px;
+    }
+
+    article h2 {
+        font-size: 1.8rem;
+    }
+
+    footer p {
+        font-size: 0.9rem;
+    }
+
+    #contato input[type="text"], #contato textarea {
+        width: 100%;
+    }
+}
+
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <h1>Estratégias para MegaGlest</h1>
+        <p>Dicas e truques para se tornar um mestre em MegaGlest!</p>
+    </header>
+
+    <nav>
+        <a href="#estrategia1">Estratégia Básica</a>
+        <a href="#estrategia2">Defesa e Expansão</a>
+        <a href="#estrategia3">Ataques Coordenados</a>
+        <a href="#dicas">Dicas Rápidas</a>
+        <a href="#unidades">Unidades</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <section>
+        <article id="estrategia1">
+            <h2>Estratégia Básica: Coleta de Recursos</h2>
+            <p>Nos primeiros minutos do jogo, foque em coletar recursos. Envie suas unidades de trabalho para pegar
+                madeira, ouro e comida. Sem uma base econômica sólida, você não conseguirá produzir unidades ou melhorar
+                suas tecnologias.</p>
+        </article>
+
+        <article id="estrategia2">
+            <h2>Defesa e Expansão</h2>
+            <p>Construa fortificações e torres de defesa logo após estabelecer sua base. Uma defesa sólida protegerá
+                suas unidades de ataques inimigos enquanto você expande seu território e coleta mais recursos. Não se
+                esqueça de manter unidades de combate em posição estratégica para defender pontos-chave.</p>
+        </article>
+
+        <article id="estrategia3">
+            <h2>Ataques Coordenados</h2>
+            <p>Quando atacar, use um grupo diversificado de unidades. Combine unidades de longo alcance (como arqueiros)
+                com unidades corpo a corpo (como guerreiros) para formar um exército forte e equilibrado. Certifique-se
+                de atacar a base inimiga de forma coordenada, destruindo seus centros de coleta de recursos primeiro.</p>
+        </article>
+
+        <!-- Nova seção: Dicas Rápidas -->
+        <article id="dicas">
+            <h2>Dicas Rápidas para MegaGlest</h2>
+            <ul>
+                <li><strong>Construa várias aldeias:</strong> Mais aldeias permitem mais unidades de trabalho, acelerando a coleta de recursos.</li>
+                <li><strong>Esteja sempre atento ao mapa:</strong> Utilize unidades de reconhecimento para localizar o inimigo antes de ser atacado.</li>
+                <li><strong>Aprenda os pontos fracos do inimigo:</strong> Cada tipo de unidade tem suas fraquezas. Exploite-as em batalhas.</li>
+            </ul>
+        </article>
+
+        <!-- Nova seção: Unidades -->
+        <article id="unidades">
+            <h2>Unidades e suas Funções</h2>
+            <p>Conhecer suas unidades e como usá-las eficientemente é essencial para o sucesso. Aqui estão algumas das unidades mais importantes:</p>
+            <ul>
+                <li><strong>Guerreiros:</strong> Unidades corpo a corpo, boas para combate direto.</li>
+                <li><strong>Arqueiros:</strong> Unidades de longo alcance, úteis para atacar inimigos à distância.</li>
+                <li><strong>Trabalhadores:</strong> Usados para coletar recursos e construir estruturas.</li>
+                <li><strong>Cavaleiros:</strong> Unidades móveis e rápidas, ideais para flanquear inimigos e causar danos rápidos.</li>
+            </ul>
+        </article>
+
+        <!-- Nova seção: FAQ -->
+        <article id="faq">
+            <h2>Perguntas Frequentes (FAQ)</h2>
+            <dl>
+                <dt>Como melhorar minha economia no MegaGlest?</dt>
+                <dd>Invista em recursos logo no início e sempre tenha unidades de trabalho em operação.</dd>
+                <dt>Qual a melhor estratégia para iniciantes?</dt>
+                <dd>Concentre-se em defender sua base enquanto coleta recursos. Expanda quando sua economia estiver sólida.</dd>
+                <dt>Como coordenar um ataque efetivo?</dt>
+                <dd>Use unidades de longo alcance para atacar de longe e unidades de corpo a corpo para pressionar o inimigo.</dd>
+            </dl>
+        </article>
+
+        <!-- Nova seção: Contato -->
+        <article id="contato">
+            <h2>Contato</h2>
+            <p>Tem alguma dúvida ou quer compartilhar suas estratégias? Envie-nos uma mensagem!</p>
+            <form>
+                <label for="nome">Seu Nome:</label><br>
+                <input type="text" id="nome" name="nome" required><br><br>
+                <label for="mensagem">Sua Mensagem:</label><br>
+                <textarea id="mensagem" name="mensagem" rows="4" required></textarea><br><br>
+                <input type="submit" value="Enviar">
+            </form>
+        </article>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 MegaGlest Estratégias | Criado por [Seu Nome]</p>
+    </footer>
+</body>
+
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário com Display Dinâmico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Formulário com Display Dinâmico</h1>
+        <h2>Alterar Margin do Formulário</h2>
+        <form id="myForm">
+            <label for="display-select">Escolha o display:</label>
+            <select id="display-select">
+                <option value="block">block</option>
+                <option value="inline">inline</option>
+                <option value="inline-block">inline-block</option>
+                <option value="flex">flex</option>
+                <option value="grid">grid</option>
+                <option value="none">none</option>
+                <option value="list-item">list-item</option>
+                <option value="table">table</option>
+                <option value="table-row">table-row</option>
+                <option value="table-cell">table-cell</option>
+                <option value="table-caption">table-caption</option>
+                <option value="run-in">run-in</option>
+                <option value="sticky">sticky</option>
+                <option value="initial">initial</option>
+                <option value="inherit">inherit</option>
+            </select>
+
+            <h3>Defina as margens:</h3>
+            <label for="margin-top">Margem Superior:</label>
+            <input type="number" id="margin-top" placeholder="Top (px)"><br><br>
+
+            <label for="margin-right">Margem Direita:</label>
+            <input type="number" id="margin-right" placeholder="Right (px)"><br><br>
+
+            <label for="margin-bottom">Margem Inferior:</label>
+            <input type="number" id="margin-bottom" placeholder="Bottom (px)"><br><br>
+
+            <label for="margin-left">Margem Esquerda:</label>
+            <input type="number" id="margin-left" placeholder="Left (px)"><br><br>
+        </form>
+
+        <!-- Formulário -->
+        <form id="dynamic-form" class="form">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" placeholder="Digite seu nome">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu email">
+
+            <label for="message">Mensagem:</label>
+            <textarea id="message" name="message" placeholder="Digite sua mensagem"></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

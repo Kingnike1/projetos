@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Input Design</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0A1F44;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 100%;
+            width: 100%;
+            max-width: 450px;
+            background-color: #11254D;
+            padding: 30px;
+            position: relative;
+            top: 500px;
+            bottom: 500px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #fff;
+            font-weight: 600;
+            font-size: 28px;
+        }
+
+        .input-group {
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .input-group label {
+            font-size: 14px;
+            color: #C4C4C4;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 14px 16px;
+            border: none;
+            border-radius: 8px;
+            background-color: #1E3B70;
+            color: #fff;
+            font-size: 16px;
+            outline: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: box-shadow 0.3s ease, background-color 0.3s ease;
+        }
+
+        .input-group input:focus {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+            background-color: #26477D;
+        }
+
+        .input-group input[type="checkbox"],
+        .input-group input[type="radio"] {
+            width: auto;
+            transform: scale(1.2);
+            margin-right: 10px;
+        }
+
+        .input-group input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 100%;
+        }
+
+        .input-group input[type="submit"]:hover {
+            background-color: #45A049;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .radio-group {
+            display: flex;
+            align-items: center;
+        }
+
+        .radio-label {
+            margin-left: 8px;
+            font-size: 14px;
+            color: #C4C4C4;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+                border-radius: 8px;
+            }
+
+            h2 {
+                font-size: 24px;
+                margin-bottom: 25px;
+            }
+
+            .input-group label {
+                font-size: 13px;
+                margin-bottom: 6px;
+            }
+
+            .input-group input {
+                padding: 12px 14px;
+                font-size: 15px;
+            }
+
+            .input-group input[type="submit"] {
+                padding: 12px;
+                font-size: 15px;
+            }
+        }
+
+
+        
+        /* -- External Social Link CSS Styles -- */
+
+        #source-link {
+            top: 120px;
+        }
+
+        #source-link>i {
+            color: rgb(94, 106, 210);
+        }
+
+        #yt-link {
+            top: 65px;
+        }
+
+        #yt-link>i {
+            color: rgb(219, 31, 106);
+
+        }
+
+        #Fund-link {
+            top: 10px;
+        }
+
+        #Fund-link>i {
+            color: rgb(255, 251, 0);
+
+        }
+
+        .meta-link {
+            align-items: center;
+            backdrop-filter: blur(3px);
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            display: inline-flex;
+            gap: 5px;
+            left: 10px;
+            padding: 10px 20px;
+            position: fixed;
+            text-decoration: none;
+            transition: background-color 600ms, border-color 600ms;
+            z-index: 10000;
+        }
+
+        .meta-link:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .meta-link>i,
+        .meta-link>span {
+            height: 20px;
+            line-height: 20px;
+        }
+
+        .meta-link>span {
+            color: white;
+            font-family: "Rubik", sans-serif;
+            transition: color 600ms;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Modern Input Design</h2>
+
+        <div class="input-group">
+            <label for="text">Text Input:</label>
+            <input type="text" id="text" name="text" value="Text Value">
+        </div>
+
+        <div class="input-group">
+            <label for="password">Password Input:</label>
+            <input type="password" id="password" name="password" value="Password">
+        </div>
+
+        <div class="input-group">
+            <label for="number">Number Input:</label>
+            <input type="number" id="number" name="number" min="1" max="10" value="5">
+        </div>
+
+        <div class="input-group">
+            <label for="email">Email Input:</label>
+            <input type="email" id="email" name="email" value="example@example.com">
+        </div>
+
+        <div class="input-group">
+            <label for="date">Date Input:</label>
+            <input type="date" id="date" name="date" value="2024-05-12">
+        </div>
+
+        <div class="input-group">
+            <label for="time">Time Input:</label>
+            <input type="time" id="time" name="time" value="12:00">
+        </div>
+
+        <div class="input-group">
+            <label for="url">URL Input:</label>
+            <input type="url" id="url" name="url" value="https://example.com">
+        </div>
+
+        <div class="input-group">
+            <label for="checkbox">Checkbox:</label>
+            <div>
+                <input type="checkbox" id="checkbox1" name="checkbox" value="checkbox1" checked>
+                <label for="checkbox1" class="radio-label">Option 1</label>
+                <input type="checkbox" id="checkbox2" name="checkbox" value="checkbox2">
+                <label for="checkbox2" class="radio-label">Option 2</label>
+            </div>
+        </div>
+
+        <div class="input-group radio-group">
+            <div>
+                <label for="radio1">Radio:</label>
+            </div>
+            <input type="radio" id="radio1" name="radio" value="radio1" checked>
+            <label for="radio1" class="radio-label">Female</label>
+
+            <input type="radio" id="radio2" name="radio" value="radio2">
+            <label for="radio2" class="radio-label">Male</label>
+        </div>
+
+        <div class="input-group">
+            <label for="file">File Input:</label>
+            <input type="file" id="file" name="file">
+        </div>
+
+        <div class="input-group">
+            <label for="range">Range Input:</label>
+            <input type="range" id="range" name="range" min="0" max="100" value="50">
+        </div>
+
+        <div class="input-group">
+            <label for="search">Search Input:</label>
+            <input type="search" id="search" name="search" value="Search Text">
+        </div>
+
+        <div class="input-group">
+            <label for="tel">Telephone Input:</label>
+            <input type="tel" id="tel" name="tel" value="1234567890">
+        </div>
+
+        <div class="input-group">
+            <label for="datetime-local">Datetime-local Input:</label>
+            <input type="datetime-local" id="datetime-local" name="datetime-local" value="2024-05-12T12:00">
+        </div>
+
+        <input type="submit" value="Submit">
+    </div>
+</body>
+
+</html>

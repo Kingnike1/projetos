@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: sans-serif;
+            font-weight: 700;
+        }
+
+        .card-container {
+            width: 80%;
+            height: 500px;
+            border: 1px solid white;
+            border-radius: 5px;
+            display: flex;
+        }
+
+        .cards {
+            position: relative;
+            left: 0;
+            width: 80px;
+            border-radius: 5px;
+            padding: 8px;
+            height: auto;
+            background-color: white;
+            transition: .5s all;
+            flex: 1;
+            font-size: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .cards:nth-child(even) {
+            background-color:aliceblue;
+        }
+
+        .cards:nth-child(odd) {
+            background-color: #706CC1;
+        }
+
+          .cards{
+            flex: 1;  cursor: pointer;
+          }
+          .cards:hover {
+            flex: 3;
+          }
+
+    </style>
+</head>
+
+<body>
+    <div class="card-container">
+        <div class="cards">1</div>
+        <div class="cards">2</div>
+        <div class="cards">3</div>
+        <div class="cards">4</div>
+        <div class="cards">5</div>
+    </div>
+</body>
+
+</html>

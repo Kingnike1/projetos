@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background-color: #000;
+    }
+
+    :root {
+      --light: #ffe6e6;
+      --dark: #000;
+    }
+
+    .container {
+      --bg-color: radial-gradient(circle at 50% 0%,
+          rgba(50, 50, 50, 1) 0%,
+          rgba(12, 12, 12, 1) 100%);
+      overflow: clip;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem 5rem;
+      width: 100%;
+      height: 100dvh;
+      background-image: var(--bg-color);
+    }
+
+    .category_container {
+      --gap: 0.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
+      gap: calc(var(--gap) * 2);
+      width: 100%;
+      height: 100%;
+    }
+
+    @media (max-width:550px) {
+      .category_container {
+        flex-direction: column;
+      }
+    }
+
+    .content {
+      --active: 0;
+      cursor: pointer;
+      overflow: clip;
+      position: relative;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      gap: 1.5rem;
+      padding: 2.5rem;
+      width: calc((100% / 3) - var(--gap));
+      height: 100%;
+      border-radius: 1rem;
+      transition: width 0.5s ease-in-out;
+    }
+
+    .content:hover {
+      --active: 1;
+      width: calc(70% - var(--gap));
+    }
+
+    .content::before {
+      content: "";
+      position: absolute;
+      z-index: -10;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--dark);
+      opacity: 0.6;
+    }
+
+    .content img {
+      position: absolute;
+      z-index: -20;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+      -o-object-position: center;
+      object-position: center;
+    }
+
+    .content .profile_image {
+      opacity: calc(1 - var(--active));
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    .profile_detail {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      width: 12rem;
+      transition: transform 0.5s cubic-bezier(0.23, 0.93, 0.77, 1) 0.01s;
+    }
+
+    .profile_detail span {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--light);
+      text-wrap: nowrap;
+    }
+
+    .profile_detail p {
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--light);
+    }
+
+    .profile_quote {
+      width: 22rem;
+      transform: translate(0,
+          calc((1 - var(--active)) * (100% + 2.5rem)));
+    }
+
+    .profile_quote p {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--light);
+      transform: translate(0,
+          calc((1 - var(--active)) * (100% + 2.5rem)));
+      transition: transform 0.5s cubic-bezier(0.23,
+          0.93, 0.77, 1) 0.1s;
+    }
+
+    .wrapper {
+      display: grid;
+      grid-template-rows: 0fr;
+      overflow: hidden;
+      transition: grid-template-rows 0.5s cubic-bezier(0.23, 0.93, 0.77, 1) 0.01s;
+      transition: grid-template-rows 0.5s cubic-bezier(0.23, 0.93, 0.77, 1) 0.01s, -ms-grid-rows 0.5s cubic-bezier(0.23, 0.93, 0.77, 1) 0.01s;
+    }
+
+    .profile_quote {
+      min-height: 0;
+      transform: translateY(50%);
+      opacity: 0;
+      transition: opacity 0.8s ease-in-out, transform 0.8s cubic-bezier(0.23, 0.93, 0.77, 1) 0.01s;
+    }
+
+    .content:hover .wrapper {
+      grid-template-rows: 1fr;
+    }
+
+    .content:hover .profile_quote {
+      transform: none;
+      opacity: 1;
+    }
+
+    /* -- External Social Link CSS Styles -- */
+
+    #source-link {
+      top: 120px;
+    }
+
+    #source-link>i {
+      color: rgb(94, 106, 210);
+    }
+
+    #yt-link {
+      top: 65px;
+    }
+
+    #yt-link>i {
+      color: rgb(219, 31, 106);
+
+    }
+
+    #Fund-link {
+      top: 10px;
+    }
+
+    #Fund-link>i {
+      color: rgb(255, 251, 0);
+
+    }
+
+    .meta-link {
+      align-items: center;
+      backdrop-filter: blur(3px);
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 6px;
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      display: inline-flex;
+      gap: 5px;
+      left: 10px;
+      padding: 10px 20px;
+      position: fixed;
+      text-decoration: none;
+      transition: background-color 600ms, border-color 600ms;
+      z-index: 10000;
+    }
+
+    .meta-link:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .meta-link>i,
+    .meta-link>span {
+      height: 20px;
+      line-height: 20px;
+    }
+
+    .meta-link>span {
+      color: white;
+      font-family: "Rubik", sans-serif;
+      transition: color 600ms;
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="container">
+    <div class="category_container">
+      <div class="content">
+        <img
+          src="https://images.pexels.com/photos/712395/pexels-photo-712395.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          class="professio_image" alt="Profession" />
+        <img
+          src="https://images.pexels.com/photos/1586795/pexels-photo-1586795.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          class="profile_image" alt="Profile" />
+        <div class="profile_detail">
+          <span>Summer</span>
+          <p>Hot Envo + Vacations</p>
+        </div>
+
+        <div class="wrapper">
+          <div class="profile_quote">
+            <p>"Summer: a season of sunshine, adventures, and memories waiting to be made."</p>
+          </div>
+        </div>
+
+      </div>
+      <div class="content">
+        <img
+          src="https://images.pexels.com/photos/1978126/pexels-photo-1978126.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          class="profession_image" alt="Profession" />
+        <img
+          src="https://images.pexels.com/photos/1978126/pexels-photo-1978126.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          class="profile_image" alt="Profile" />
+        <div class="profile_detail">
+          <span>Winter</span>
+          <p>Cold Envo + Vacations</p>
+        </div>
+        <div class="wrapper">
+          <div class="profile_quote">
+            <p>"Winter, a season of crisp air, cozy nights by the fire, and the magic of snow-covered landscapes.
+              "</p>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <img
+          src="https://images.pexels.com/photos/9095426/pexels-photo-9095426.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          class="profession_image" alt="Profession" />
+        <img
+          src="https://images.pexels.com/photos/2745224/pexels-photo-2745224.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          class="profile_image" alt="Profile" />
+        <div class="profile_detail">
+          <span>Monsoon</span>
+          <p>Rainy Envo + Seasoning</p>
+        </div>
+        <div class="wrapper">
+          <div class="profile_quote">
+            <p>"Monsoon, a time of refreshing rains, lush greenery, and the earth's rejuvenation."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!--Social Liks codings below-->
+  <a id="source-link" class="meta-link" href="https://t.me/codewith_muhilan" target="_blank">
+    <i class="fas fa-link"></i>
+    <span class="roboto-mono">Join my Telegram</span>
+  </a>
+
+  <a id="yt-link" class="meta-link" href="https://www.youtube.com/@codewith_muhilan?sub_confirmation=1" target="_blank">
+    <i class="fab fa-youtube"></i>
+    <span> Subscribe my channel</span>
+  </a>
+
+  <a id="Fund-link" class="meta-link" href="https://www.buymeacoffee.com/codewithmuhilan" target="_blank">
+    <i class="fas fa-dollar-sign"></i>
+    <span> Show your Support..❤</span>
+  </a>
+</body>
+
+</html>

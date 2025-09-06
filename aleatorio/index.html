@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel de Tarefas</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    #tasks {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .task {
+      padding: 15px;
+      border: 1px solid #ddd;
+      background-color: #fff;
+      margin: 5px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .task:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .task.completed {
+      border-left: 4px solid #4caf50;
+    }
+
+    canvas {
+      max-width: 600px;
+      margin: 20px auto;
+      display: block;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1>Painel de Tarefas</h1>
+
+  <button id="loadTasks">Carregar Tarefas</button>
+  <div id="tasks">
+    <!-- Tarefas serão carregadas aqui -->
+  </div>
+
+  <canvas id="taskChart"></canvas>
+
+  <script>
+    // Carregar tarefas usando Axios
+    const loadTasks = async () => {
+      try {
+        const response = await axios.get('https://jsonplaceholder.typicode.com/todos');
+        const tasks = response.data;
+
+        // Renderizar tarefas com jQuery
+        const taskContainer = $('#tasks');
+        taskContainer.empty(); // Limpa a lista anterior
+        tasks.forEach(task => {
+          const taskElement = $(
+            `<div class="task ${task.completed ? 'completed' : ''}">
+              <strong>${task.title}</strong>
+              <p>Status: ${task.completed ? 'Concluída' : 'Pendente'}</p>
+            </div>`
+          );
+          taskContainer.append(taskElement);
+        });
+
+        // Atualizar gráfico
+        const completedCount = tasks.filter(task => task.completed).length;
+        const pendingCount = tasks.length - completedCount;
+        updateChart(completedCount, pendingCount);
+
+      } catch (error) {
+        console.error('Erro ao carregar tarefas:', error);
+      }
+    };
+
+    // Configurar gráfico com Chart.js
+    let chart;
+    const updateChart = (completed, pending) => {
+      const ctx = document.getElementById('taskChart').getContext('2d');
+      if (chart) chart.destroy(); // Destruir gráfico anterior para evitar sobreposição
+
+      chart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+          labels: ['Concluídas', 'Pendentes'],
+          datasets: [{
+            data: [completed, pending],
+            backgroundColor: ['#4caf50', '#f44336']
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'top'
+            }
+          }
+        }
+      });
+    };
+
+    // Associar evento ao botão
+    $('#loadTasks').on('click', loadTasks);
+  </script>
+</body>
+</html>

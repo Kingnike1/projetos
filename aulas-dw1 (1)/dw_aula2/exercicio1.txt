@@ -1,0 +1,7 @@
+Crie uma página contendo uma tabela com 3 linhas. A primeira linha deve ter 3 colunas. A segunda linha deve conter 2 colunas. A terceira linha deve conter 1 coluna. Essa página deve conter um título com a tag <h1> com seu nome.
+
+Crie outra página com uma lista não numerada, contendo o nome dos meses do ano.
+
+Faça uma terceira página que deve conter uma imagem.
+
+Altere a primeira página adicionando dois links: um para a segunda página e outro para a terceira página.

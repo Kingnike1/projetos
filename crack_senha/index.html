@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Ataque</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Simulador de Ataque</h1>
+    <input type="text" id="passwordInput" placeholder="Insira a senha">
+    <button id="startButton">Iniciar Ataque</button>
+
+    <div id="settingsContainer">
+        <div class="options">
+            <label><input type="checkbox" id="includeNumbers" checked> Números (0-9)</label>
+            <label><input type="checkbox" id="includeLowercase" checked> Letras minúsculas (a-z)</label>
+            <label><input type="checkbox" id="includeUppercase" checked> Letras maiúsculas (A-Z)</label>
+            <label><input type="checkbox" id="includeSpecial" checked> Caracteres especiais (!@#$...)</label>
+        </div>
+        <input type="number" id="maxAttempts" placeholder="Tempo máximo (em segundos)" value="30">
+    </div>
+
+    <div id="status">Aguardando ação...</div>
+    <div id="attempts">Tentativas: 0</div>
+    <div id="timeSpent">Tempo gasto: 0m 0s</div>
+    <div id="progressBar"><div></div></div>
+    <div id="loadingSpinner">🔄</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

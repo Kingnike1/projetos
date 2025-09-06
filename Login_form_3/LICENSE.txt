@@ -1,0 +1,17 @@
+Licença de Uso Comercial Limitada
+
+Copyright © 2024 Smart UI Studio
+
+A permissão é concedida, gratuitamente, a qualquer pessoa que obtenha uma cópia deste software e arquivos de documentação associados (o "Software"), para usar, copiar, modificar e usar o Software para fins comerciais, sujeito às seguintes condições:
+
+O aviso de direitos autorais acima e este aviso de permissão devem ser incluídos em todas as cópias ou partes substanciais do Software.
+
+O Software pode ser usado, modificado e incorporado a outros produtos para fins comerciais. No entanto, o código-fonte do Software não pode ser distribuído, sublicenciado ou vendido de forma independente ou como parte de qualquer produto comercial.
+
+A redistribuição do código-fonte, com ou sem modificação, é permitida apenas para fins não comerciais. A distribuição do código-fonte em qualquer forma comercial, incluindo oferecê-lo como parte de um serviço ou produto, é estritamente proibida sem a permissão expressa por escrito do Smart UI Studio.
+
+Esta licença não concede permissão para usar os nomes comerciais, marcas registradas, marcas de serviço ou nomes de produtos do Smart UI Studio, exceto conforme necessário para descrever a origem do Software.
+
+Aviso Legal:
+
+O SOFTWARE É FORNECIDO "NO ESTADO EM QUE SE ENCONTRA", SEM GARANTIA DE QUALQUER TIPO, EXPRESSA OU IMPLÍCITA, INCLUINDO, MAS NÃO SE LIMITANDO ÀS GARANTIAS DE COMERCIALIZAÇÃO, ADEQUAÇÃO A UM DETERMINADO FIM E NÃO VIOLAÇÃO. EM NENHUMA HIPÓTESE OS AUTORES OU TITULARES DE DIREITOS AUTORAIS SERÃO RESPONSÁVEIS POR QUALQUER REIVINDICAÇÃO, DANOS OU OUTRA RESPONSABILIDADE, SEJA EM UMA AÇÃO DE CONTRATO, ATO ILÍCITO OU DE OUTRA FORMA, DECORRENTE DE, FORA DE, OU EM CONEXÃO COM O SOFTWARE OU O USO OU OUTRAS NEGOCIAÇÕES NO SOFTWARE.

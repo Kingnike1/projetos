@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Bar</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700&display=swap">
+
+    <style>
+        body {
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            top: 150px;
+            height: 100vh;
+            margin: 0;
+            font-family: "Syne", sans-serif;
+            font-weight: 600;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            width: 100%;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:nth-child(even) {
+            background-color: #706CC1;
+        }
+
+        .dropdown-content a:nth-child(odd) {
+            background-color: #c1bef7;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        input[type="text"] {
+            padding: 8px;
+            margin-top: 8px;
+            width: 200px;
+            font-family: "Syne", sans-serif;
+            font-weight: 600;
+        }
+
+        input:focus {
+            outline-color: #706CC1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="dropdown">
+        <input type="text" id="searchInput" onkeyup="filterFunction()" placeholder="Search...">
+        <div class="dropdown-content" id="myDropdown">
+            <a href="#">India</a>
+            <a href="#">America</a>
+            <a href="#">Russia</a>
+            <a href="#">France</a>
+            <a href="#">Australia</a>
+            <a href="#">Japan</a>
+        </div>
+    </div>
+
+        <script>
+          function filterFunction() {
+            var input, filter, dropdown, options, i;
+            input = document.getElementById("searchInput");
+            filter = input.value.toUpperCase();
+            dropdown = document.getElementById("myDropdown");
+            options = dropdown.getElementsByTagName("a");
+            for (i = 0; i < options.length; i++) {
+                options[i].style.display =
+                    options[i].innerText.toUpperCase().includes(filter) ?
+                        "block" : "none";
+            }
+          }
+        </script>
+
+</body>
+
+</html>

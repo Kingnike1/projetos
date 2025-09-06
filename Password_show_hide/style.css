@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 350px;
+    font-family: 'calibri';
+}
+
+.field {
+    width: 300px;
+    position: relative;
+    color: rgb(220, 220, 220);
+    caret-color: white;
+}
+
+#password {
+    width: 100%;
+    outline: none;
+    background: none;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.566);
+    padding: 10px 25px 10px 0px;
+    color: #fff;
+    height: 35px;
+}
+
+label {
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    transition: .3s;
+    z-index: -1;
+}
+
+.far {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    cursor: pointer;
+    opacity: 0;
+    transition: .3s;
+    width: 30px;
+    text-align: center;
+    visibility: hidden;
+}
+
+.underline {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    background: rgb(163, 255, 178);
+    transform: scaleX(0);
+    transition: .3s;
+    border-radius: 10px;
+}
+
+input:focus~.underline {
+    transform: scaleX(1);
+}
+
+input:focus~label,
+input:valid~label {
+    bottom: 35px;
+    font-size: 15px;
+}
+
+.field input[type='text'] {
+    font-size: 16px;
+}
+
+input:valid~.far {
+    opacity: 1;
+    visibility: visible;
+}
+
+input:focus~.underline {
+    animation: underlineAnimate 2s infinite alternate;
+}
+
+@keyframes underlineAnimate {
+    to {
+        filter: hue-rotate(360deg);
+    }
+}

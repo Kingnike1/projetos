@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotating Box Parallax</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            font-family: Arial, sans-serif;
+            height: 300vh; /* Adjust based on your content */
+        }
+
+        .section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            color: white;
+            /* background: linear-gradient(45deg, #ff7e5f, #feb47b); */
+            border: 2px solid black;
+            background-color: #fff;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .box {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            position: relative;
+            top: -40%;
+            left: -40%;
+            background-image: url("bg.png");
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="section" id="section1">
+        <div class="box" style="display: none;"></div>
+        <div class="content">
+            <!-- Section 1 -->
+        </div>
+    </div>
+    <div class="section" id="section2">
+        <div class="box"></div>
+        <div class="content">
+            <!-- Section 2 -->
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        const sections = document.querySelectorAll(".section");
+        const boxes = document.querySelectorAll(".box");
+
+        sections.forEach((section, index) => {
+            const box = boxes[index];
+            let hasFlipped = false;
+
+            gsap.to(box, {
+                x: "100vw", y: "1000px",
+                scrollTrigger: {
+                    trigger: section, start: "top center", scrub: true,
+                    onUpdate: self => {
+                        if (self.direction === -1 && self.progress < self.start && !hasFlipped) {
+                            gsap.to(box, { rotationY: "+=180", duration: 0.5 }); hasFlipped = true;
+                        } else if (self.direction === 1 && hasFlipped) {
+                            gsap.to(box, { rotationY: "-=180", duration: 0.5 }); hasFlipped = false;
+                        } } }
+            });
+
+
+        });
+    </script>
+</body>
+</html>

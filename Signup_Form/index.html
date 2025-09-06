@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Sign up</title>
+
+</head>
+
+<body>
+  <div class="form-wrapper">
+    <div class="static-text">
+      <span class="logo bi bi-command"></span>
+      <h2>Get Started Now!</h2>
+      <p>Set up your account and unlock endless possibilities.</p>
+    </div>
+    <form id="signup-form">
+      <div class="field-group">
+        <input type="text" id="email" placeholder="" autocomplete="off">
+        <label for="email">Email</label>
+        <span class="field-icon bi bi-envelope"></span>
+      </div>
+      <div class="field-group">
+        <input type="password" id="password" placeholder="">
+        <label for="password">Password</label>
+        <span class="field-icon bi bi-lock"></span>
+      </div>
+      <div class="field-group">
+        <input type="password" id="confirm-password" placeholder="">
+        <label for="confirm-password">Confirm Password</label>
+        <span class="field-icon bi bi-lock"></span>
+      </div>
+      <div class="agree-checkbox">
+        <input type="checkbox" id="terms-condition">
+        <label for="terms-condition">I agree to the <a href="#">Terms and Conditions</a></label>
+      </div>
+      <button>Sign up</button>
+    </form>
+    <span class="separator">or</span>
+    <div class="other-options">
+      <a href="#">
+        <span class="option-icon bi bi-google"></span>
+        Sign up with Google
+      </a>
+      <a href="#">
+        <span class="option-icon bi bi-microsoft"></span>
+        Sign up with Microsoft
+      </a>
+    </div>
+    <p class="login-link">Already have an Account ? <a href="#">Login</a></p>
+  </div>
+</body>
+
+</html>
